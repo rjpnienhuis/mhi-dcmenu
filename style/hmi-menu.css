@@ -15,14 +15,15 @@ body {
 article,header,footer {
   padding: 1.2em;
   font-family: sans-serif;
+  font-size: 1.2em;
 }
 
-header{
-  font-size: 3em;
+h1{
+  font-size:xx-large;
 }
 
 article{
-    font-size: 1.2em;
+    clear: both;
 }
 
 ul li{
@@ -41,6 +42,5 @@ ul li{
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 30px;
-  width:8em;
+  width:10em;
 }
-

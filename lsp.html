@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Melius Health Informatics">
+    <title>LSP koppelvlakken</title>
+    <link rel="stylesheet" href="style/hmi-menu.css">
+    <link rel="stylesheet" href="style/simple_layout.css">
+    <link rel="icon" href="Images/favicon.png">
+</head>
+
+<body>
+    <section>
+        <div class="wrapper">
+            <header class="page-header"><a href="menu.html"> 
+                <button class="navbutton" style="float: right;">Menu</button>
+              </a><h1 style="float:left">LSP koppelvlakken</h1></header>
+            <main class="page-body">
+                <p>’LSP’ staat voor ‘Landelijk Schakel Punt’ en is een Centraal systeem voor elektronische gegevensuitwisseling (<a href="hie-platform.html">HIE platform</a>) dat wordt geëxploiteerd door VZVZ. </p>
+                <p>Dossiervormende systemen worden op het LSP aangesloten vanuit één of meerdere rollen. Voorbeelden van rollen zijn ‘Medicatiebewaker’, ‘Ketenzorg KIS’ en ‘Waarnemend huisarts’. Bij iedere rol horen bepaalde koppelvlakken. In een formeel kwalificatieproces wordt vastgesteld of dossiervormende systemen de bij hun rol(len) behorende koppelvlakken correct implementeren. Als blijkt dat het dossiervormend de bij een bepaalde rol behorende koppelvlakken correct implementeert, ontvangt het systeem voor de rol een zogenaamde XIS-kwalificatie.</p>              
+                <p>Een overzicht van dossiervormende systemen en hun XIS-kwalificaties is te vinden op de <a href="https://www.nictiz.nl/standaardisatie/kwalificatiecentrum/xis-kwalificatie/">Nictiz website</a>.</p>                                            
+                <p>De LSP koppelvlakken zijn oorspronkelijk gebaseerd op een standaard die HL7 v3 heet. HL7 v3 wordt internationaal weinig toegepast en de LSP koppelvlakken zijn vaak erg specifiek voor de Nederlandse situatie. Voor een aantal nieuwe ontwikkelingen worden ook modernere FHIR koppelvlakken gebruikt. </p>
+                <p>LSP koppelvlakken zijn vaak erg specifiek. Zij worden voor specifieke doelen en specifieke systemen/ rollen gebruikt. Daarnaast verloopt alle communicatie altijd via het centrale LSP. Dat maakt dat LSP koppelvlakken minder makkelijk voor andere usecases (los van LSP) kunnen worden gebruikt.</p>
+            </main>
+            <footer class="page-footer"><button onclick="javascript:history.go(-1)" class="navbutton">Vorige</button>
+                <button class="navbutton">Volgende </button> </footer-left></footer>
+        </div>
+    </section>
+</body>
+</html>

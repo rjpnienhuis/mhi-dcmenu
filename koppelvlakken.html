@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Melius Health Informatics">
+    <title>(Standaard) Koppelvlakken</title>
+    <link rel="stylesheet" href="style/hmi-menu.css">
+    <link rel="stylesheet" href="style/simple_layout.css">
+    <link rel="icon" href="Images/favicon.png">
+</head>
+
+<body>
+    <section>
+        <div class="wrapper">
+            <header class="page-header"><a href="menu.html"> 
+                <button class="navbutton" style="float: right;">Menu</button>
+              </a><h1 style="float:left">(Standaard) Koppelvlakken</h1></header>
+            <main class="page-body">
+                <p>Alle dossiervormende systemen op de Nederlandse markt bieden mogelijkheden om te koppelen met andere systemen. Meestal zijn die mogelijkheden ‘gestandaardiseerd’: er zijn (inter)nationale technische afspraken waaraan de koppelvlakken voldoen. Helaas zijn er wel veel lokale ‘dialecten’ in omloop. Organisaties als Nictiz, VZVZ, Taskforce Samen Vooruit, NEN en NUTS spannen zich in om het aantal dialecten te verminderen en om koppelvlakken zoveel mogelijk op hetzelfde soort technologie te baseren. Een ander woord voor een koppelvlak is een API (Application Programming Interface).</p>
+                <h3>Soorten koppelvlakken</h3>
+                <p>Er bestaan verschillende typen koppelvlakken, met een verschillende technologische basis. Sommige koppelvlakken worden gebruikt om gegevens te versturen naar een ander systeem of om gegevens te ontvangen vanuit een ander systeem. Dit noemt men wel PUSH koppelingen. Weer andere koppelvlakken maken het mogelijk dat een ander systeem gegevens ophaalt uit het dossiervormend systeem of dat het dossiervormend systeem gegevens ophaalt uit een ander systeem. Dit worden ook wel PULL koppelingen genoemd. Er zijn ook koppelvlakken om systemen visueel met elkaar te integreren, zodat bijvoorbeeld een scherm van een thuismonitoring applicatie in het EPD kan worden getoond. Sommige koppelvlakken gaan niet zozeer over het versturen of ontvangen van gegevens maar meer om het uitvoeren van acties, zoals het plannen van een afspraak of het starten van een werkstroom.  Sommige koppelvlakken gaan over het automatisch inloggen van gebruikers (Single-Sign-On) of over context synchronisatie (zorgen dat alle applicaties die een gebruiker open heeft, dezelfde patiënt gebruiken). </p>
+                <h3>Specificaties van koppelvlakken</h3>
+                <p>Koppelvlakken worden heel nauwkeurig gespecificeerd. In de specificatie wordt precies beschreven hoe ze gebruikt kunnen worden. Bijvoorbeeld welke informatie in welke vorm naar welk adres moet worden gestuurd en hoe de beveiliging precies wordt geregeld. De specificaties zijn zo dwingend dat ze door ontwikkelaars ook wel een ‘contract’ worden genoemd: afspraken tussen de gebruiker van het koppelvlak (de client) en de aanbieder van het koppelvlak (de server).</p>
+                <p>Sommige leveranciers van dossiervormende systemen bieden publiekelijk toegankelijke specificaties van de door hun systemen geboden koppelvlakken. Voorbeelden zijn Epic (via <a href="https://open.epic.com/">open.epic.com</a>) en Nedap (via <a href="https://www.ons-api.nl/">>Ons API</a>). Beide leveranciers bieden ook een (gratis toegankelijke) testomgeving voor externe partijen. Een enkel systeem (zoals Base24 van Code24) gedraagt zich als platform, waardoor <u>alle</u> informatie in het systeem in een standaard formaat wordt opgeslagen en met standaard koppelvlakken kan worden benaderd. </p>
+                <h3>Wie maakt en levert de koppelvlakken?</h3>
+                <p>In sommige gevallen worden de koppelvlakken van een dossiervormend systeem door een andere leverancier ontwikkeld. Founda is een voorbeeld van een leverancier die gestandaardiseerde koppelvlakken levert op dossiervormende systemen. Het grote voordeel is dat de Founda koppelvlakken hetzelfde zijn voor ieder dossiervormend systeem. Dit werkt echter alleen voor leveranciers van dossiervormende systemen waarmee Founda een hechte samenwerkingsrelatie heeft, of voor dossiervormende systemen die zelf veel standaard koppelvlakken leveren die Founda kan gebruiken.</p>
+                <h3>Landelijke API strategie</h3>
+                <p>Nictiz werkt aan een nationale API strategie en een bibliotheek van koppelvlakken. Doel van die bibliotheek is het stimuleren van gebruik van koppelvlakken. In de API strategie worden eisen bepaald waaraan API’s moeten voldoen om in de bibliotheek te worden opgenomen. Voorbeelden van eisen zijn de publieke beschikbaarheid van specificaties in een bepaald formaat, duidelijke procedures voor onboarding (het aansluiten op de API) en technische eisen aan de API zelf.</p>
+            </main>
+            <footer class="page-footer"><button onclick="javascript:history.go(-1)" class="navbutton">Vorige</button>
+                <button class="navbutton">Volgende </button> </footer-left></footer>
+        </div>
+    </section>
+</body>
+</html>

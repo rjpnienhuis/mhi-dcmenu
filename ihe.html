@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Melius Health Informatics">
+    <title>IHE X*</title>
+    <link rel="stylesheet" href="style/hmi-menu.css">
+    <link rel="stylesheet" href="style/simple_layout.css">
+    <link rel="icon" href="Images/favicon.png">
+</head>
+
+<body>
+    <section>
+        <div class="wrapper">
+            <header class="page-header"><a href="menu.html"> 
+                <button class="navbutton" style="float: right;">Menu</button>
+              </a><h1 style="float:left">IHE X*</h1></header>
+            <main class="page-body">
+                <p>‘IHE’ staat voor ‘Integrating the Healthcare Enterprise’ en is een Amerikaanse stichting die zogenaamde ’integratieprofielen’ ontwikkeld. Een integratieprofiel beschrijft een specifieke usecase, rollen (van systemen) binnen die usecase en interacties tussen die rollen. Ieder integratieprofiel heeft een specifieke code en alle profielen die beginnen met een ‘X’ beschrijven interacties tussen verschillende zorgaanbieders. Bekende profielen zijn XDS, XDM, XDR en XCA, allemaal gericht op het uitwisselen van documenten tussen samenwerkende zorgaanbieders.</p>
+                <p>IHE ontwikkelt zelf geen standaarden maar beschrijft hoe bepaalde standaarden in een usecase moeten worden gebruikt. Alle interacties in een Integratieprofiel vereisen het gebruik van specifieke standaarden, bijvoorbeeld HL7 standaarden of standaarden die buiten de zorg zijn ontwikkeld. De X* integratieprofielen voor documentuitwisseling zijn ‘content agnostisch’. Dat wil zeggen dat de integratieprofielen alleen beschrijven hoe documenten veilig kunnen worden uitgewisseld maar geen uitspraken doen over welke documenten worden uitgewisseld, laat staan over de specifieke inhoud van die documenten. Dit betekent dat de inhoud en het formaat van documenten door andere partijen, zoals Nictiz, moet worden gespecificeerd en gestandaardiseerd. </p>
+                <h3>Gebruik van IHE X* integratieprofielen</h3>
+                <p>De IHE X* integratieprofielen en de standaard koppelvlakken die in de profielen worden gebruikt, worden vooral door EPD systemen gebruikt. Epic biedt ondersteuning voor een aantal IHE X* profielen via de Epic CareEverywhere module. ChipSoft via Zorgplatform. Nexus maakt gebruik van het PEGASOS platform voor de ondersteuning van IHE X* profielen.</p>            
+                <p>Wanneer een dossiervormend systeem zelf geen IHE X* koppelvlakken biedt kan gebruik gemaakt worden van een systeem van een derde partij. Voorbeelden van leveranciers die IHE X* systemen en koppelvlakken leveren zijn Philips Forcare, eNovation en Founda. Omdat dit soort systemen wel moeten worden gekoppeld aan het dossiervormend systeem, is veel samenwerking tussen de beide leveranciers noodzakelijk. Zo’n koppeling zal ook niet altijd mogelijk zijn of maar beperkt mogelijk zijn. Een dossiervormend systeem dat wel over (publiek gedocumenteerde) andere standaard koppelvlakken beschikt zal eenvoudiger kunnen worden gekoppeld aan de IHE X* systemen van een derde partij.</p>                
+                <h3>Correcte ondersteuning aantonen in een Connectathon</h3>
+                <p>Een leverancier mag niet zomaar beweren dat hij IHE integratieprofielen ondersteunt. Het systeem moet daarvoor eerst de correcte werking aantonen in een zogenaamde Connectathon. In de Connectathon wordt de correcte ondersteuning van één of meer rollen in een IHE integratieprofiel getoetst. Pas als aan alle eisen is voldaan mag de leverancier een zogenaamd conformance statement afgeven. </p>
+                <p>De strenge eisen aan leveranciers moeten ertoe leiden dat systemen van verschillende leveranciers zonder al te veel aanpassingen met elkaar samen kunnen werken. Toch is dat in de praktijk niet helemaal het geval, vooral omdat alle profielen een zekere mate van vrijheid bevatten om regionale/ landelijke afspraken later toe te kunnen voegen. Op landelijk niveau worden de IHE profielen daarom aangescherpt door aanvullende afspraken te maken. Bijvoorbeeld ten aanzien van authenticatie, specifieke invulling van metadata bij documenten en gebruik van terminologie. De ‘Technische Afspraken’ (TA) van de Taskforce Samen Vooruit voor Beelduitwisseling zijn een voorbeeld van dat soort landelijke afspraken. Ook het programma TWIIN beoogt nationale afspraken over het gebruik van IHE profielen te maken.</p>
+                <p>Zelfs al ondersteunt een dossiervormend systeem (of een ander systeem) bepaalde rollen en koppelvlakken uit een IHE X* profiel, nog steeds zijn aanvullende afspraken nodig over de inhoud en het formaat van de te versturen en ontvangen documenten. Als voorbeeld kan de BGZ dienen. Nictiz heeft een standaard ontwikkeld voor documenten die de Basis Gegevensset Zorg van een patiënt bevatten. In die standaard wordt de inhoud (de BGZ) en het precieze formaat van het document gespecificeerd. IHE ‘Content Profielen’ beschrijven hoe een specifiek standaard document (zoals de BGZ) wordt uitgewisseld op basis van een IHE integratieprofiel.</p>
+            </main>
+            <footer class="page-footer"><button onclick="javascript:history.go(-1)" class="navbutton">Vorige</button>
+                <button class="navbutton">Volgende </button> </footer-left></footer>
+        </div>
+    </section>
+</body>
+</html>

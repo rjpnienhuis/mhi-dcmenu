@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Melius Health Informatics">
+    <title>Visuele koppelvlakken</title>
+    <link rel="stylesheet" href="style/hmi-menu.css">
+    <link rel="stylesheet" href="style/simple_layout.css">
+    <link rel="icon" href="Images/favicon.png">
+</head>
+
+<body>
+    <section>
+        <div class="wrapper">
+            <header class="page-header"><a href="menu.html"> 
+                <button class="navbutton" style="float: right;">Menu</button>
+              </a><h1 style="float:left">Visuele koppelvlakken</h1></header>
+            <main class="page-body">
+                <p>De meeste koppelvlakken gaan over het uitwisselen van gegevens tussen systemen of over het starten van activiteiten in een systeem door een ander systeem. Sommige koppelvlakken werken echter heel anders: zij koppelen schermen van applicaties.</p>
+                <p>Stel je voor dat je twee applicaties gebruikt: een ziekenhuis EPD en een toepassing voor thuismonitoring. Het gelijktijdig werken met die twee applicaties leidt potentieel tot problemen: gebruikers moeten in beide applicaties inloggen en in beide applicaties dezelfde patiënt selecteren. Dat laatste kan potentieel tot patiëntverwisselingen leiden. Visuele koppelvlakken zorgen ervoor dat die twee applicaties zodanig samenwerken dat:</p>
+                <ul>
+                    <li>Je maar in één applicatie in hoeft te loggen, waarna je in de andere applicatie automatisch wordt ingelogd (Single-Sign-On)</li>
+                    <li>Je maar in één applicatie een patiënt hoeft te selecteren, waarna de andere applicatie automagisch dezelfde patiënt selecteert (context sharing). Soms gaat context sharing verder, en kun je bijvoorbeeld ook opnames, studies of afspraken delen tussen applicaties.</li>
+                    <li>Soms worden schermen ook visueel geïntegreerd. Dan wordt bijvoorbeeld het scherm van de thuismonitoring applicatie als onderdeel van het EPD getoond.</li>
+                </ul>              
+                <p>Er bestaan 3 belangrijke zorgspecifieke standaarden voor dit soort visuele koppelvlakken: ‘<a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=1">HL7 CCOW</a>’, ‘<a href="https://fhircast.org/">HL7 FHIRCast</a>’ en ‘<a href="http://www.hl7.org/fhir/smart-app-launch/">HL7 Smart App Launch Framework</a>’. HL7 CCOW is verouderd maar wordt nog veel gebruikt. Naast zorgspecifieke standaarden zijn er ook heel veel algemene en eenvoudige manieren om applicaties visueel te integreren. Niet alle manieren die in omloop zijn voldoen aan de strikte beveiligingseisen die in de zorg (moeten) worden gesteld.</p>                                                            
+            </main>
+            <footer class="page-footer"><button onclick="javascript:history.go(-1)" class="navbutton">Vorige</button>
+                <button class="navbutton">Volgende </button> </footer-left></footer>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Melius Health Informatics">
+    <title>HIE platforms</title>
+    <link rel="stylesheet" href="style/hmi-menu.css">
+    <link rel="stylesheet" href="style/simple_layout.css">
+    <link rel="icon" href="Images/favicon.png">
+</head>
+
+<body>
+    <section>
+        <div class="wrapper">
+            <header class="page-header"><a href="menu.html"> 
+                <button class="navbutton" style="float: right;">Menu</button>
+              </a><h1 style="float:left">HIE platforms</h1></header>
+            <main class="page-body">
+                <p>‘HIE’ staat voor ‘Health Information Exchange’. HIE platforms zijn volledig gericht op het uitwisselen van informatie tussen <a href="dossiervormende-systemen.html">dossiervormende systemen</a>. Zij bieden ondersteunende functionaliteit om die uitwisseling te vereenvoudigen of mogelijk te maken.</p>
+                <p>Soms is het onderscheid met een <a href="transactie-platforms.html">transactieplatform</a> moeilijk te maken. Het verschil is dat de focus van een  transactieplatform ligt bij het tot stand brengen van voor alle partijen optimale transacties, waarbij gegevensuitwisseling slechts een middel is, terwijl de focus van HIE platforms ligt op het ondersteunen van gegevensuitwisseling in alle situaties. </p>
+                <h3>Onderdelen van een HIE platform</h3>
+                <p>HIE platforms bieden doorgaans de volgende functionaliteiten:</p>
+                <ul>
+                    <li><b>Connectiviteit.</b> Het tot stand brengen van veilige connecties met dossiervormende systemen.</li>
+                    <li><b>Transformatie.</b> Het transformeren van gegevens uit een dossiervormend systeem naar een ander formaat, dat door het ontvangende systeem begrepen wordt</li>
+                    <li><b>Aggregatie.</b> Het samenvoegen van gegevens uit verschillende dossiervormende systemen om die als samenhangende set naar een ontvangend (of opvragend) systeem te sturen.</li>
+                    <li><b>Indexering.</b> Het bijhouden in welke dossiervormende systemen informatie van welke patiënten kan worden gevonden, zodat opvragende systemen alleen relevante dossiervormende systemen bevragen.</li>
+                    <li><b>Authenticatie.</b> Het authentiseren van organisaties, systemen en personen, zodat met zekerheid kan worden vastgesteld aan wie welke informatie uit welke bron beschikbaar wordt gesteld</li>
+                    <li><b>Autorisatie.</b>Zorgen dat alleen gegevens worden verstrekt aan organisaties, systemen en personen die daartoe bevoegd zijn, bijvoorbeeld omdat zij daartoe uitdrukkelijke toestemming van de patiënt hebben gekregen</li>
+                    <li><b>Logging.</b>Zorgen dat iedere uitwisseling wordt gelogd in een ‘audit trail’zodat naderhand kan worden vastgesteld welke informatie aan wie beschikbaar is gesteld.</li>
+                </ul>
+                <h3>Belangrijke HIE platforms</h3>                
+                <p>In Nederland is het Landelijk Schakel Punt (LSP) misschien wel het belangrijkste voorbeeld van een HIE platform. Het LSP bevat een index met verwijzingen naar informatie in aangesloten dossiervormende systemen. Zo weet het LSP van welke patiënten in welke dossiervormende systemen informatie beschikbaar is, bijvoorbeeld waar medicatie-informatie beschikbaar is. Ook ‘aggregeert’ het LSP informatie uit verschillende dossiervormende systemen. Wanneer een applicatie het LSP om een overzicht van medicatie ‘vraagt’, voegt het LSP informatie samen uit alle dossiervormende systemen waarvan zij weet dat die de gevraagde informatie bevatten.</p>                
+                <p>Vergelijkbare functionaliteit wordt geleverd door sommige Regionale Samenwerkings Organisaties (RSO) zoals de stichting Gerrit en Rijnmondnet. Deze organisaties maken daarbij vaak gebruik van een IHE XDS platform. XDS is een IHE integratieprofiel voor de uitwisseling van documenten. Net als het LSP kent XDS een index en aggregeert zij informatie uit verschillende aangesloten dossiervormende systemen. XDS sluit meer aan bij internationaal vergelijkbare initiatieven dan het LSP.</p>
+                <p>Ook <a href="https://www.foundahealth.com/">Founda Health</a> biedt <a href="koppelvlakken.html">standaard koppelvlakken</a> op dossiervormende systemen  en apps maar kan ook worden gezien als HIE platform. Zij biedt veilige connectiviteit en transformatiediensten aan aangesloten dossiervormende systemen en apps. <a href="https://www.chipsoft.nl/oplossingen/148/Zorgplatform">Zorgplatform van ChipSoft</a> is in de eerste plaats een standaard koppelvlak (of API platform) voor ChipSoft HiX dossiers, maar biedt daarnaast ook HIE functionaliteit zoals indexering en aggregatie.</p>
+            </main>
+            <footer class="page-footer"><button onclick="javascript:history.go(-1)" class="navbutton">Vorige</button>
+                <button class="navbutton">Volgende </button> </footer-left></footer>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Melius Health Informatics">
+    <title>Verwijzen/ Overdragen</title>
+    <link rel="stylesheet" href="style/hmi-menu.css">
+    <link rel="stylesheet" href="style/simple_layout.css">
+    <link rel="icon" href="Images/favicon.png">
+</head>
+
+<body>
+    <section>
+        <div class="wrapper">
+            <header class="page-header"><a href="menu.html"> 
+                <button class="navbutton" style="float: right;">Menu</button>
+              </a><h1 style="float:left">Verwijzen/ Overdragen</h1></header>
+            <main class="page-body">
+                <p>Verwijzen en overdragen zijn zogenaamde ‘transacties’: een zorgvrager en een zorgaanbieder worden aan elkaar gekoppeld en er wordt een afspraak gemaakt over te leveren zorg en de voorwaarden waaronder die zorg kan worden verleend. Om een patiënt goed te kunnen verwijzen of overdragen is onder andere de volgende functionaliteit nodig:</p>            
+                <ul>
+                    <li>Eenduidig vaststellen van de zorgvraag en eventuele aanvullende eisen/ wensen van de patiënt</li>
+                    <li>Zoeken van bijpassend zorgaanbod en aanvullende informatie bij dat zorgaanbod zoals toegangstijden, waarderingen en andere kwaliteitsparameters, verzekeringsvoorwaarden, benodigde (gezondheidsinformatie, et cetera)</li>
+                    <li>Versturen van de door de zorgaanbieder benodigde informatie, zoals patiënt identificerende gegevens, demografische gegevens en voor het zorgaanbod relevante gezondheidsinformatie</li>
+                    <li>Maken van afspraken</li>
+                    <li>Statusvoering (wordt de aanvraag geaccepteerd, zijn afspraken gemaakt, is aanvullende informatie benodigd)</li>
+                    <li>Voorbereiden van de patiënt</li>
+                    <li>Terugrapporteren van eventuele resultaten</li>
+                    <li>Slimme rapportages waarmee bottlenecks kunnen worden geïdentificeerd, trends geanalyseerd en voorspellingen over benodigde capaciteit kunnen worden gedaan, zodat aanvrager en aanbieder processen kunnen optimaliseren.</li>
+                </ul>  
+                <h3>Platforms en systemen</h3>            
+                <p>Voor het bieden van dit soort functionaliteiten is een samenspel van oplossingen nodig.</p>                                                            
+                <p>De basisfunctionaliteit voor verwijzen en overdragen wordt geleverd door een <a href="transactie-platforms.html">transactieplatform</a>: eenduidig bepalen van de zorgvraag en matchen aan zorgaanbod. Bekende transactieplatforms zijn ZorgDomein en Point (eNovation). Dit soort platforms bevatten ook functionaliteit voor het samenstellen en verzenden van datasets van aanvrager naar aanbieder, functionaliteit die in generieke zin door <a href="hie-platform.html">HIE platforms</a> wordt geboden of door <a href="dossiervormende-systemen.html">dossiervormende systemen</a> zelf. Er is wel veel te zeggen voor de combinatie van een transactieplatform en een HIE platform, omdat het transactieplatform:</p>
+                <ul>
+                    <li>Weet welke informatie bij een bepaalde zorgvraag/ zorgaanbod combinatie moet worden verstuurd</li>
+                    <li>Aan wie de informatie precies moet worden verstuurd (de aanbieder, afdeling, etc) </li>
+                    <li>Welke informatie wordt terugverwacht</li>                    
+                </ul>
+                <h3>Onderstaande systemen</h3>
+                <p>Wanneer meerdere typen zorgaanbod in aanmerking komen en de patiënt moet worden geholpen bij het maken van een persoonlijke afweging, worden soms digitale keuzehulpen ingezet. Een keuzehulp is een voorbeeld van een <a href="digitale-zorg-apps.html">digitale zorg app</a>. Een transactieplatform wordt soms gekoppeld met zo’n keuzehulp zodat zij een geïntegreerd onderdeel van de digitale patiëntreis wordt.</p>
+                <p>Voor het maken van de feitelijke afspraak wordt vaak een portaal of app van de aanbieder gebruikt. Voordeel van het portaal is dat ook direct specifieke informatie bij de afspraak kan worden uitgevraagd en geleverd. Het transactieplatform wordt soms gekoppeld met het portaal, zodat de patiënt een geïntegreerde digitale reis ervaart. </p>
+                <p>Soms is extra informatie van de patiënt nodig in aanloop tot de afspraak of overdracht. Dat kunnen vragenlijsten zijn maar ook thuismeetgegevens gedurende een langere periode. Voor dit soort functionaliteit wordt soms het portaal van de zorgaanbieder ingezet maar soms ook gespecialiseerde digitale zorg apps van andere leveranciers. Ook voor het verstrekken van informatie over een afspraak, behandeling, opname of overdracht worden soms specifieke digitale zorg apps ingezet. Als dit soort apps worden gekoppeld aan het transactieplatform ontstaat een geïntegreerde digitale patiëntreis.</p>
+                <p><a href="bi.html">BI platforms</a> kunnen behulpzaam zijn bij het verzamelen van bedrijfsinformatie ten behoeve van het oplossen van bottlenecks, bepalen en voorspellen van benodigde capaciteit en het verbeteren van de klantervaring. Veel transactieplatforms bevatten ingebouwde rapportages en downloadbare gegevens die in het eigen BI platform kunnen worden ingelezen.</p>
+                <p>Voor het versturen van informatie naar systemen van zorgaanbieders is adresinformatie nodig. Een <a href="adresseer-voorziening.html">adresseervoorziening</a> kan helpen maar is ook vaak al onderdeel van een transactieplatform of <a href="hie-platform.html">HIE platform</a>.</p>
+                <p>In de nabije toekomst kunnen <a href="ai-algoritmes.html">AI algoritmes</a> worden gebruikt om de verwijzer en/ of de patiënt zelf te helpen de juiste zorg te vinden. Dataplatforms kunnen dan behulpzaam zijn bij zowel het trainen van algoritmes als het leveren van data voor individueel advies.</p>
+                <h3>Koppelingen tussen systemen</h3>
+                <p>Door het transactieplatform als vertrekpunt te nemen ontstaat een min of meer overzichtelijke situatie. Een eerste vereiste is dat dossiervormende systemen (van aanvrager en aanbieder) aan het transactieplatform worden gekoppeld. De meeste transactieplatforms bieden daarom een veelheid aan koppelvlakken, met name <a href="fhir.html">FHIR gebaseerde koppelvlakken</a> maar ook <a href="visuele-koppelvlakken.html">visuele koppelvlakken</a> en <a href="overige-koppelvlakken.html">overige koppelvlakken</a>.</p>
+                <p>Ondersteunende systemen kunnen op verschillende manieren worden gekoppeld. Om een geïntegreerde patiëntreis te bieden worden digitale zorgapps vaak visueel gekoppeld met het transactieplatform. Ook portalen worden soms visueel gekoppeld. Dit soort systemen vragen daarnaast een vaak eenvoudige datakoppeling, vaak op basis van FHIR maar soms ook via bedrijfseigen koppelvlakken.</p>
+                <p>Veel transactiesystemen kunnen grote hoeveelheden data in sets opleveren  ten behoeve van het vullen van een dataplatform en of BI platform.</p>
+            </main>
+            <footer class="page-footer"><button onclick="javascript:history.go(-1)" class="navbutton">Vorige</button>
+                <button class="navbutton">Volgende </button> </footer-left></footer>
+        </div>
+    </section>
+</body>
+</html>

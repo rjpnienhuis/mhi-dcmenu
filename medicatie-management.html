@@ -5,18 +5,19 @@
         <meta name="author" content="Melius Health Informatics">
         <title>Medicatie management</title>
         <link rel="stylesheet" href="style/hmi-menu.css">
-        <link rel="icon" href="Images/favicon.ico">
+        <link rel="stylesheet" href="style/layout1.css">
+        <link rel="icon" href="Images/favicon.png">
         </head>
   <body>
-      <header>
-        <div>
-                <h1 style="float:left"> Medicatie management </h1>
-                <a href="menu.html"> 
-                    <button class="navbutton" style="float:right">Menu</button>
-                </a> 
-            </div>
-      </header>
-    <article id="mainArticle"> Medicatiemanagement is een voorbeeld van een
+      <header-left>                       
+        <h1> Medicatie management </h1>                 
+      </header-left>
+      <header-right>
+        <a href="menu.html"> 
+          <button class="navbutton" >Menu</button>
+        </a>
+      </header-right>
+    <article id="mainArticle" > Medicatiemanagement is een voorbeeld van een
       usecase. De usecase zal hier niet volledig worden uitgewerkt. Een
       mogelijke (technische) uitwerking vind plaats in het landelijke programma
       'Samen voor medicatieoverdracht'. Het volgende kan worden overwogen: <br>
@@ -60,8 +61,8 @@
           geïntegreerd binnen het dossiervormend systeem. </li>
       </ul>
     </article>
-    <footer id="pageFooter"> 
+    <footer-left id="pageFooter"> 
         <button onclick="javascript:history.go(-1)" class="navbutton">Vorige</button>
-        <button class="navbutton">Volgende </button> </footer>
+        <button class="navbutton">Volgende </button> </footer-left>
   </body>
 </html>

@@ -4,7 +4,7 @@ body {
     "header-left header-right"
     "article article"
     "footer-left footer-right";
-  grid-template-rows: 5em 1fr 5em;  
+  grid-template-rows: auto minmax(400px, auto) 1fr;  
   grid-template-columns: 1fr 10em ;
   grid-row-gap: 10px;
   grid-column-gap: 10px;

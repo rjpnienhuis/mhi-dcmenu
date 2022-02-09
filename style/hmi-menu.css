@@ -14,6 +14,23 @@ ul li{
   padding:10px;
 }
 
+td, th {
+
+  border: 1px solid #0B3C60;
+
+  text-align: left;
+
+  padding: 8px;
+
+}
+
+
+tr:nth-child(even) {
+
+  background-color:grey;
+
+}
+
 .navbutton {
   background-color: #0B3C60;
   border: none;

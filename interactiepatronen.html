@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Melius Health Informatics">
+    <title>Interactiepatronen</title>
+    <link rel="stylesheet" href="style/hmi-menu.css">
+    <link rel="stylesheet" href="style/simple_layout.css">
+    <link rel="icon" href="Images/favicon.png">
+</head>
+
+<body>
+    <section>
+        <div class="wrapper">
+            <header class="page-header"><a href="menu.html"> 
+                <button class="navbutton" style="float: right;">Menu</button>
+              </a><h1 style="float:left">Interactiepatronen</h1></header>
+            <main class="page-body">
+                <p>Interactiepatronen geven weer hoe verzender en ontvanger met elkaar communiceren en of er eventuele centrale rollen bij de interactie betrokken zijn. Typische patronen zijn:</p> 
+                <ul>
+                    <li><b>Het PUSH patroon</b><br>Een verzender verstuurt informatie naar een ontvanger, zonder dat hierom gevraagd werd door de ontvanger.</li>
+                    <li><b>Het PULL patroon</b><br>Een ontvanger vraagt aan de verzender om specifieke informatie. De verzender geeft de gevraagde informatie terug aan de ontvanger</li>
+                    <li><b>Het NOTIFIED-PULL patroon</b><br>Een verzender stuurt een berichtje (notificatie) naar de ontvangt dat bepaalde informatie beschikbaar is. De ontvanger vraagt vervolgens via het PULL patroon de betreffende informatie op.</li>
+                    <li><b>Het INDEXED-PULL patroon</b><br>Een ontvanger vraagt aan een centrale index of en waar bepaalde informatie beschikbaar is. Vervolgens vraagt deze ontvanger aan alle relevante verzenders de benodigde informatie op via het PULL patroon. Het Nederlandse LSP is een voorbeeld van INDEXED-PULL, evenals het IHE XDS integratieprofiel.</li>
+                </ul>
+            </main>
+            <footer class="page-footer"><button onclick="javascript:history.go(-1)" class="navbutton">Vorige</button>
+                <button class="navbutton">Volgende </button> </footer-left></footer>
+        </div>
+    </section>
+</body>
+</html>

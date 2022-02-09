@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Melius Health Informatics">
+    <title>Koppelvlak stijlen (API stijlen)</title>
+    <link rel="stylesheet" href="style/hmi-menu.css">
+    <link rel="stylesheet" href="style/simple_layout.css">
+    <link rel="icon" href="Images/favicon.png">
+</head>
+
+<body>
+    <section>
+        <div class="wrapper">
+            <header class="page-header"><a href="menu.html"> 
+                <button class="navbutton" style="float: right;">Menu</button>
+              </a><h1 style="float:left">Koppelvlak stijlen (API stijlen)</h1></header>
+            <main class="page-body">
+                <p>Veel technische afspraken die ten grondslag liggen aan API’s  zijn erg specifiek en hebben weinig te maken met ‘vakmanschap’ of ’creativiteit’. Maar dan komt het: iedere API heeft ook een ’stijl’. Net zo moeilijk tastbaar als de stijl van een kunstenaar.</p>
+                <h3>RESTfull versus RPC</h3>
+                <p>Er zijn wel wat ‘hoofdstromingen’ te onderscheiden binnen API stijlen. Sommige API’s gaan vooral over standaard acties (toevoegen, lezen, wijzigen, verwijderen) op eenheden van informatie. Bijvoorbeeld het verwijderen van een patiënt of het toevoegen van een opname. Die eenheden worden ‘resources’ genoemd en de stijl van dit soort API’s noemt men ‘RESTfull’. FHIR (Fast HealthCare Interoperable Resources) heeft een RESTFull API stijl.</p> 
+                <p>Andere API’s gaan vooral over het uitvoeren van operaties of ‘procedures’. De stijl van dit soort API’s noemt met ‘RPC’ wat staat voor ‘Remote Procedure Call’. IHE XDS API’s (en aanverwante koppelvlakken) hanteren een RPC stijl (hoewel een restfull/ FHIR gebaseerde versie in de maak is).</p>
+                <p>In de praktijk komen de beide stijlen vaak allebei terug in een bepaalde standaard. Zo zijn er ook RPC elementen geslopen in FHIR.</p>
+                <h3>Uitwisselingsparadigma’s</h3>
+                <p>Een andere manier om naar API-stijlen te kijken is  door onderscheid te maken in iets dat ik ‘uitwisselingsparadigma’s noem.Er kunnen drie paradigma’s worden onderscheiden. Ze hebben allen hun eigen kenmerken en voor- en nadelen</p>
+                <table>
+                    <tr>
+                        <th>Berichten</th>
+                        <th>Documenten</th>
+                        <th>resources</th>                    
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Automatische transacties tussen systemen</li>
+                                <li>Gebruik staat vooraf exact vast</li>
+                                <li>Kleine ‘unit’ met precies genoeg informatie voor vastgestelde gebruik </li>
+                                <li>Inhoud bepaald door de zender (systeem)</li>
+                                <li>Geschikt voor asynchroon gebruik</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Informatie delen tussen mensen</li>
+                                <li>Meervoudig, niet altijd op voorhand bepaald, gebruik</li>
+                                <li>Samenhangende set van informatie, inclusief context</li>
+                                <li>Inhoud bepaald door de auteur (persoon) ondersteund door systeem</li>
+                                <li>Geschikt voor asynchroon gebruik</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Informatie delen tussen systemen</li>
+                                <li>Meervoudig, niet altijd op voorhand bepaald, gebruik</li>
+                                <li>Informatie ingedeeld in afzonderlijk geadresseerde en opvraagbare (queryable) zorginhoudelijke concepten</li>
+                                <li>Inhoud bepaald door ontvanger (systeem)</li>
+                                <li>Vooral synchroon gebruik</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <p>Sommige standaarden voor gegevensuitwisseling bieden ondersteuning voor alle drie de hier onderscheidden paradigma’s. FHIR biedt bijvoorbeeld ondersteuning voor zowlel berichten, documenten als resources. IHE XDS en IHE XCA is vooral document georiënteerd maar het concept van ‘on demand documents’ heeft veel weg van resources.</p>
+                <p>Hoe dan ook maakt het gebruikte paradigma en de gebruikte stijl onderdeel uit van de te maken technische afspraken.</p>
+            </main>
+            <footer class="page-footer"><button onclick="javascript:history.go(-1)" class="navbutton">Vorige</button>
+                <button class="navbutton">Volgende </button> </footer-left></footer>
+        </div>
+    </section>
+</body>
+</html>

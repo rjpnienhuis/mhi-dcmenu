@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Melius Health Informatics">
+    <title>Transport</title>
+    <link rel="stylesheet" href="style/hmi-menu.css">
+    <link rel="stylesheet" href="style/simple_layout.css">
+    <link rel="icon" href="Images/favicon.png">
+</head>
+
+<body>
+    <section>
+        <div class="wrapper">
+            <header class="page-header"><a href="menu.html"> 
+                <button class="navbutton" style="float: right;">Menu</button>
+              </a><h1 style="float:left">Transport</h1></header>
+            <main class="page-body">
+                <p>Hoewel transport in het TSV model een eenvoudige laag is zonder verdere onderverdeling, bestaat de laag ‘transport’ in werkelijkheid uit een veelheid aan technologieën en standaarden. Denk aan standaarden voor fysieke bekabeling of draadloze communicatie. Standaarden voor het inpakken van data in pakketjes (en garanderen dat pakketjes netjes in volgorde worden afgeleverd) en het routeren van pakketjes over een (soms wereldomvattend) netwerk. Dit zijn de standaarden die bijvoorbeeld de basis voor het Internet of voor je WIFI netwerk thuis vormen.</p>
+                <p>Geen van deze technologieën is echter zorg specifiek. Daarom zijn ze ook niet verder uitgewerkt in het TSV model. Het OSI model (layer 1-5) geeft een verdere onderverdeling van de TSV ‘transport laag’. Toch is het wel van belang om, bij het uitwisselen van gegevens in de zorg, afspraken te maken over het type netwerk dat voor transport wordt gebruikt. Het belangrijkste onderscheid is:</p>                            
+                <ul>
+                    <li>Gebruik van het publieke internet</li>
+                    <li>Gebruik van een privaat netwerk</li>
+                </ul>
+                <h3>Het publieke internet</h3>
+                <p>Het publieke internet is overal en er zijn geen specifieke afspraken nodig tussen partijen om erover te communiceren. Dat maakt het publieke internet ook ‘schaalbaar’: er kunnen makkelijk nieuwe partijen worden toegevoegd waarmee gegevens worden uitgewisseld. Omdat het internet ‘publiek’ is kan niet worden vertrouwd op de beveiliging van het netwerk zelf. Daarom zal de communicatie over het netwerk inherent veilig moeten zijn. Alle betrokken systemen zullen zelf de maatregelen uit de laag ‘Vertrouwen’ moeten implementeren.</p>
+                <p>Dit model is tegenwoordig ‘best practice’: alle betrokken systemen moet inherent veilig zijn en mogen voor hun veiligheid niet afhankelijk zijn van het specifieke netwerk waarover gegevens worden uitgewisseld. </p>
+                <p>De meeste sectoren prefereren inmiddels gebruik van het publieke internet boven private netwerken, vanwege de genoemde schaalvoordelen en omdat moderne systemen ontworpen zijn om inherent veilig te zijn.</p>
+                <h3>Private netwerken</h3>
+                <p>Soms wordt gekozen voor een volledig afgescheiden ‘privaat netwerk’. Dat kan door bijvoorbeeld fysieke kabels tussen organisaties te leggen of door straalverbindingen te gebruiken, maar vaker wordt gebruik gemaakt van een ‘Virtual Private Network’ (VPN). Een VPN creëert een beveiligde ‘tunnel’ over het internet zodat het lijkt alsof er gebruik wordt gemaakt van een privaat netwerk.</p>
+                <p>Private netwerken zijn veel minder schaalbaar dan het publieke internet. Dat is goed voorstelbaar voor een fysiek bekabeld netwerk: steeds wanneer een nieuwe zorgaanbieder op het netwerk wordt aangesloten moeten nieuwe kabels tussen zorgaanbieders worden aangelegd. Dit kost veel tijd en biedt daarnaast hooguit de schijn van veiligheid omdat het opgraven en aftappen van een kabel in de publieke ruimte niet ingewikkeld is. Hetzelfde geldt als niet met fysieke kabels maar met straalverbindingen wordt gewerkt.</p>
+                <p>Een VPN is veel schaalbaarder dan een fysiek netwerk maar vereist wel aanvullende systemen, maatregelen en beheer. De benodigde inspanningen en afstemming zijn daarom (veel) groter dan in het geval van transport over het publieke internet. Veel moderne SaaS systemen zijn daarom niet afhankelijk van een VPN en bieden inherent veilig transport over het publieke interne.</p>
+            </main>
+            <footer class="page-footer"><button onclick="javascript:history.go(-1)" class="navbutton">Vorige</button>
+                <button class="navbutton">Volgende </button> </footer-left></footer>
+        </div>
+    </section>
+</body>
+</html>

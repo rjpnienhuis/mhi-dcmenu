@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Melius Health Informatics">
+    <title>Grondslag</title>
+    <link rel="stylesheet" href="style/hmi-menu.css">
+    <link rel="stylesheet" href="style/simple_layout.css">
+    <link rel="icon" href="Images/favicon.png">
+</head>
+
+<body>
+    <section>
+        <div class="wrapper">
+            <header class="page-header"><a href="menu.html"> 
+                <button class="navbutton" style="float: right;">Menu</button>
+              </a><h1 style="float:left">Grondslag</h1></header>
+            <main class="page-body">
+                <p>Het verstrekken van persoonsgegevens aan een andere zorgaanbieder mag alleen wanneer daarvoor een grondslag bestaat. Grofweg is er bij het uitwisselen van gezondheidsinformatie tussen zorgaanbieders sprake van twee mogelijke grondslagen:</p>
+                <h3>Uitdrukkelijke toestemming</h3>                    
+                <p>Gegevens mogen worden uitgewisseld indien de betrokkene (patiënt/ cliënt) daartoe uitdrukkelijk toestemming geeft. Het betreft een in vrijheid gegeven toestemming (dus er is op geen enkele manier druk uitgeoefend op de betrokkene). De betrokkene is ook geïnformeerd over doel en middel van de uitwisseling/ verstrekking. Tot slot is de toestemming ook voldoende specifiek, dus wordt duidelijk aangegeven aan welke partijen welk type gegevens beschikbaar worden gesteld.</p>
+                <h3>Behandelrelatie</h3>
+                <p>Indien er sprake is van een behandelrelatie mogen gegevens die nodig zijn om die behandelrelatie in te vullen worden uitgewisseld tussen zorgaanbieders. Het betreft dus nadrukkelijk niet alle gegevens, maar alleen die gegevens die in het kader van de behandelrelatie benodigd zijn. Of iets ‘nodig is’ kan worden vastgelegd in professionele standaarden of in afspraken tussen zorgaanbieders. Een voorbeeld van een uitwisseling waarvoor de grondslag ‘behandelrelatie’ geldig is, is een verwijzing of een overdracht. Het is zaak dat bij een specifieke verwijzing of overdracht de juiste gegevens worden toegevoegd: die gegevens die nodig zijn om de zorg volgend uit de verwijzing of overdracht te bieden en niets meer (of minder) dan dat. <a href="transactie-platforms.html">Transactiesystemen</a> kunnen behulpzaam zijn bij het verstrekken van precies de juiste informatie.</p>
+                <p>Indien een zorgaanbieder bij een andere zorgaanbieder (of bij een centraal platform) informatie opvraagt over een betrokkene, moet kunnen worden aangetoond dat er een grondslag bestaat voor het opvragen van de betreffende informatie door de betreffende zorgaanbieder. Technische afspraken zijn nodig om het automatisch controleren van grondslag mogelijk te maken. Grofweg zijn er twee modellen denkbaar:</p>
+                <h3>Centraal model</h3>
+                <p>Informatie over toestemmingen en behandelrelaties worden in een centraal register opgeslagen. Een systeem dat een vraag om informatie ontvangt, controleert eerst in het centrale register of een grondslag bestaat voor uitwisseling van de geraagde gegevens. Een belangrijk nadeel van het centrale model is dat een centraal register een ‘privacy hotspot’wordt: het register bevat zeer gevoelige informatie over zeer veel personen. Voordelen van een centraal register zijn vooral dat het beheer van grondslagen (al dan niet door de betrokkene zelf) technisch eenvoudiger kan worden gerealiseerd dan in een gedistribueerd model. Een voorbeeld van een centraal register is <a href="https://www.vzvz.nl/diensten/gemeenschappelijke-diensten/mitz">MITZ</a>.</p>
+                <h3>Gedistribueerd model</h3>
+                <p>Bij een gedistribueerd model worden grondslagen vastgelegd bij de verschillende zorgaanbieders. Het systeem dat een vraag stelt moet dan het bestaan van de grondslag (toestemming of behandelrelatie) aantonen, door bewijs hiervan mee te sturen met de vraag om informatie. In het geval informatie ongevraagd verzonden wordt, is ook bewijs nodig dat hiervoor een grondslag bestaat. Bijvoorbeeld toestemming of het bestaan van een verwijzing in het kader waarvan informatie wordt verzonden.</p>
+                <p>Ongeacht het gekozen model (centraal of gedistribueerd) zijn technische afspraken nodig over:</p>
+                <ul>
+                    <li><b>Communicatie van grondslagen</b><br>De wijze waarop een grondslag wordt toegevoegd aan een informatieverzoek of hoe zij kan worden opgevraagd bij een centraal register.</li>
+                    <li><b>Het formaat van grondslagen.</b><br>Hoe wordt de grondslag (op een voor de computer begrijpelijke manier) uitgedrukt</li>
+                </ul>
+                <p>De internationale IHE organisatie heeft een aantal profielen ontwikkeld voor het uitwisselen en formatteren van toestemmingen: het IHE Basic Patient Privacy Concents (BPPC) profiel en het IHE Advanced Patient Privacy Consents (APPC) profiel. Beide profielen worden vooral in een (semi) gecentraliseerd model toegepast maar de BBPC en APPC documentformaten kunnen in principe ook in een gedistribueerd model worden toegepast. Er bestaan ook IHE profielen voor verwijzen en overdragen waarbij het bestaan van een behandelrelatie kan worden aangetoond en opgevraagd (Het IHE Corss-Enterprise Basic eReferral Workflow Definition profiel, XBeR-WD).</p>
+                <p>In de Nederlandse situatie lijkt gekozen te worden voor een centraal model (MITZ) voor toestemmingen dat niet helemaal in overeenstemming is met de genoemde internationale IHE profielen. Omdat bij verwijzen en overdragen in bijna alle gevallen gebruik gemaakt wordt van transactiesystemen (ZorgDomein, Point) is de grondslag ‘behandelrelatie’ doorgaans goed geborgd.</p>
+                <h3>autorisatie van personen</h3>
+                <p>Een grondslag is een term uit de AVG en  is van toepassing op organisaties (zorgaanbieders) en niet op individuen. Er is een grondslag nodig om informatie over een betrokkene aan een andere zorgaanbieder te verstrekken. Naast de grondslag bestaat er ook nog zoiets als autorisatie van personen. Een verpleegkundige mag andere zorggegevens zien dan een internist. Autorisatie speelt zich af binnen organisaties, grondslag tussen organisaties.</p>
+                <p>Soms worden deze twee zaken met elkaar verward en wordt geprobeerd om in een <a href="hie-platform.html">centraal platform voor gegevensuitwisseling</a> te bepalen of de persoon die gegevens opvraagt hiertoe wel geautoriseerd is. Dit is om een aantal redenen onwenselijk:</p>
+                <ul>
+                    <li>Gegevens die worden opgehaald via een uitwisselingssysteem worden doorgaans overgenomen in het dossiervormend systeem van de betreffende zorgaanbieder. Ze zijn daarna dus onderhavig aan de autorisatieregels van dat dossiervormend systeem en niet aan het centrale uitwisselingssysteem.</li>
+                    <li>Informatiebehoeften in de zorg zijn bijzonder complex en veranderlijk. Een poging om centraal (zorgbreed) autorisatieregels op te stellen is gedoemd te mislukken en zal leiden tot rigiditeit die niet in overeenstemming is met het dynamische karakter van zorg en gezondheid.</li>
+                </ul>
+            </main>
+            <footer class="page-footer"><button onclick="javascript:history.go(-1)" class="navbutton">Vorige</button>
+                <button class="navbutton">Volgende </button> </footer-left></footer>
+        </div>
+    </section>
+</body>
+</html>

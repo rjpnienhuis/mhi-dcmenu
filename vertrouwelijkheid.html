@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Melius Health Informatics">
-    <title>Interface</title>
+    <title>Vertrouwelijkheid</title>
     <link rel="stylesheet" href="style/hmi-menu.css">
     <link rel="stylesheet" href="style/simple_layout.css">
     <link rel="icon" href="Images/favicon.png">
@@ -16,14 +16,10 @@
         <div class="wrapper">
             <header class="page-header"><a href="menu.html"> 
                 <button class="navbutton" style="float: right;">Menu</button>
-              </a><h1 style="float:left">Interface</h1></header>
+              </a><h1 style="float:left">Vertrouwelijkheid</h1></header>
             <main class="page-body">
-                <p>De laag ‘Interface’ in het TSV model gaat over technische afspraken die de werking van koppelvlakken betreffen. Hoe werken ze (API stijl en Interactiepatronen)  en hoe wordt informatie gecodeerd en geformatteerd.</p>
-                <ul>
-                    <li><a href="formattering_codering.html">Formattering & codering</a></li>
-                    <li><a href="interactiepatronen.html">Interactipatronen</a></li>
-                    <li><a href="api-stijl.html">API stijl</a></li>
-                </ul>>
+                <p>Om te voorkomen dat berichten tijdens transport worden afgeluisterd worden zij versleuteld. Opnieuw wordt hier gebruik gemaakt van public key cryptography zoals beschreven in <a href="indentificatie_authenticatie">‘identificatie en authenticatie’</a>. Doorgaans wordt echter wel een ander sleutelpaar gebruikt dan het sleutelpaar dat wordt gebruikt voor authenticatie en digitale ondertekening.</p>
+                <p>Technische afspraken dienen te worden gemaakt over de algoritmes die worden gebruikt voor het versleutelen van berichten en over sleutelbeheer (de PKI).</p>
             </main>
             <footer class="page-footer"><button onclick="javascript:history.go(-1)" class="navbutton">Vorige</button>
                 <button class="navbutton">Volgende </button> </footer-left></footer>

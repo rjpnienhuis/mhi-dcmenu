@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Melius Health Informatics">
+    <title>Codering en formattering</title>
+    <link rel="stylesheet" href="style/hmi-menu.css">
+    <link rel="stylesheet" href="style/simple_layout.css">
+    <link rel="icon" href="Images/favicon.png">
+</head>
+
+<body>
+    <section>
+        <div class="wrapper">
+            <header class="page-header"><a href="menu.html"> 
+                <button class="navbutton" style="float: right;">Menu</button>
+              </a><h1 style="float:left">Codering en formattering</h1></header>
+            <main class="page-body">
+                <h3>Codering</h3>
+                <p>De meeste mensen weten bijvoorbeeld wel dat een computer ‘binair’ rekent (dus met énen en nullen) maar hoe kun je in een binair stelsel de letter ‘A’ representeren? Daar zijn technische afspraken over gemaakt die we een ‘codering’ noemen. Helaas zijn er veel verschillende afspraken/ coderingen en bij het uitwisselen van gegevens is het van belang dat we precies weten welke codering gebruikt wordt. UTF-8 en UTF-16 zijn voorbeelden van standaarden voor codering.</p>                
+                <h3>Formatering</h3>
+                <p>Computers zijn niet in staat om natuurlijke taal te begrijpen omdat deze te ambivalent is. Mensen snappen (meestal) de intentie achter een boodschap omdat zij bij communicatie ook de context in overweging nemen, computers kijken alleen naar de boodschap zelf. Daarom is het ontzettend belangrijk dat de boodschap in een geformaliseerd ‘formaat’ wordt verpakt.</p>
+                <p>Er bestaan veel verschillende formaten. Veel formaten zijn niet specifiek voor een bepaald domein (zoals zorg). Neem bijvoorbeeld het document formaat ‘PDF’ (Portable Document Format) dat wereldwijd in verschillende contexten wordt gebruikt. Andere formaten zijn leverancier specifiek. Een voorbeeld is het docx formaat voor Microsoft Word documenten. En weer andere formaten zijn specifiek voor een bepaald domein, zoals het formaat van HL7 versie 2 berichten die in de zorg nog steeds zeer veel worden gebruikt.</p>
+                <h3>Gestructureerde informatie</h3>
+                <p>Sommige formaten worden gebruikt om informatie ‘gestructureerd’ uit te wisselen. Dat wil zeggen, zodanig dat de ontvangende computer de inhoud van verzonden informatie kan interpreteren en er beslissingen op kan nemen. Als we bijvoorbeeld informatie over een patiënt gestructureerd willen versturen, moeten we zorgen dat ontvangende computers naam, geboortedatum, adres, et cetera als afzonderlijke gegevenselementen kunnen onderscheiden en interpreteren.</p>
+                <p>Voor communicatie van ‘gestructureerde informatie’ over het internet, zijn twee formaten erg populair: XML en JSON. Moderne zorgspecifieke standaarden voor gegevensuitwisseling, zoals FHIR en HL7 versie 3 (en afgeleide standaarden) maken gebruik van XML en JSON. De meeste koppelvlakken ondersteunen beide formaten maar soms moeten hier toch aanvullende afspraken over gemaakt worden.</p>
+                <figure>
+                    <img src="Images/formattering.png">
+                    <figcaption>XML en JSON zijn allebei formaten die geschikt zijn om gestructureerde gegevens uit te wisselen en worden domein-overstijgend gebruikt. In het XML formaat is zichtbaar dat de UTF-8 codering wordt gebruikt.</figcaption>
+                </figure> 
+            </main>
+            <footer class="page-footer"><button onclick="javascript:history.go(-1)" class="navbutton">Vorige</button>
+                <button class="navbutton">Volgende </button> </footer-left></footer>
+        </div>
+    </section>
+</body>
+</html>

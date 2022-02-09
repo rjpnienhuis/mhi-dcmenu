@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Melius Health Informatics">
+    <title>Integriteit</title>
+    <link rel="stylesheet" href="style/hmi-menu.css">
+    <link rel="stylesheet" href="style/simple_layout.css">
+    <link rel="icon" href="Images/favicon.png">
+</head>
+
+<body>
+    <section>
+        <div class="wrapper">
+            <header class="page-header"><a href="menu.html"> 
+                <button class="navbutton" style="float: right;">Menu</button>
+              </a><h1 style="float:left">Integriteit</h1></header>
+            <main class="page-body">
+                <p>Voorkomen dient te worden dat gegevens tijdens transport bedoeld (door kwaadwillenden) of onbedoeld (door transportfouten) worden aangepast. Denk bijvoorbeeld aan een hacker die de dosering in medicatieberichten aanpast.</p>
+                <p>Technologieën die het mogelijk maken om te controleren of informatie niet is aangepast staan bekend als ‘digitale handtekeningen’. Ze berusten op public key cryptography zoals beschreven bij <a href="indentificatie_authenticatie.html#authenticatie"‘>authenticatie’</a>:</p>
+                <ul>
+                    <li>Er wordt een uniek getal (een zogenaamde hash) berekend over het bericht.</li>
+                    <li>Een verzender gebruikt een private sleutel om  het unieke getal te versleutelen en plaatst dat in een handtekening bij het bericht</li>
+                    <li>De ontvanger berekent hetzelfde unieke getal over het bericht en ontsleuteld de handtekening met de publieke sleutel van de verzender</li>
+                    <li>Als het door de ontvanger berekende getal overeenstemt met het getal in de ontsleutelde handtekening dan:</li>
+                    <ul>
+                        <li>Is het bericht niet aangepast onderweg</li>
+                        <li>Is het bericht afkomstig van de verwachte verzender</li>
+                    </ul>
+                </ul>
+                <p>Dit soort technieken vergen technische afspraken over de te gebruiken algoritmes, over de plaatsing van de handtekening in berichten en over de te gebruiken private en publieke sleutels.</p>
+            </main>
+            <footer class="page-footer"><button onclick="javascript:history.go(-1)" class="navbutton">Vorige</button>
+                <button class="navbutton">Volgende </button> </footer-left></footer>
+        </div>
+    </section>
+</body>
+</html>

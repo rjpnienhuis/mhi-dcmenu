@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Melius Health Informatics">
+    <title>Identificatie en authenticatie</title>
+    <link rel="stylesheet" href="style/hmi-menu.css">
+    <link rel="stylesheet" href="style/simple_layout.css">
+    <link rel="icon" href="Images/favicon.png">
+</head>
+
+<body>
+    <section>
+        <div class="wrapper">
+            <header class="page-header"><a href="menu.html"> 
+                <button class="navbutton" style="float: right;">Menu</button>
+              </a><h1 style="float:left">Identificatie en authenticatie</h1></header>
+            <main class="page-body">
+                <p>Vertrouwen is in hoge mate afhankelijk van het vermogen om:</p>
+                <ul>
+                    <li>Communicerende partijen in een netwerk (mensen, organisaties, computers, applicaties, <a href="koppelvlakken.html">koppelvlakken</a>) eenduidig te kunnen identificeren (identificatie)</li>
+                    <li>Te voorkomen dat een communicerende partij zich als een andere partij voor kan doen: het bewijzen van identiteit (authenticatie).</li>
+                </ul>
+                <p>Vaak wordt bij authenticatie vooral gedacht aan het bewijzen dat een persoon is wie hij zegt dat hij is. Bijvoorbeeld doordat die persoon een wachtwoord kent. Of doordat hij een wachtwoord kent én een per SMS (of app) verzonden code kan opgeven (2 factor authenticatie). In de communicatie van gegevens over een netwerk is het echter net zo belangrijk dat ook de communicerende systemen eenduidig kunnen worden geïdentificeerd en dat hun identiteit kan worden bewezen. Soms zijn er immers helemaal geen mensen rechtstreeks betrokken bij de communicatie van informatie en voorkomen moet worden dat informatie naar een systeem wordt gestuurd dat zich voordoet als het EPD van een ziekenhuis maar in werkelijkheid de computer van een hacker is.</p>
+                <h3>Identificatie</h3>
+                <p>Weten met wie we communiceren is om verschillende redenen belangrijk, bijvoorbeeld:</p>
+                <ul>
+                    <li>Autorisatiebeslissingen hangen af van aan wie (welke persoon of organisatie of zelfs systeem) gegevens beschikbaar worden gesteld</li>
+                    <li>Voor het aanleggen van een (verplichte) audittrail (logging) is het van belang om te weten wie (welke persoon, organisatie, systeem) welke bewerking op welke gegevens heeft gedaan.</li>
+                    <li>Voorkomen moet worden dat we per ongeluk gegevens beschikbaar stellen aan de verkeerde persoon, organisatie of systeem. Identificatie dient dus eenduidig te zijn (een BSN of UZI nummer mag nooit aan meerdere personen worden uitgereikt).</li>
+                </ul>
+                <p>Om personen en organisaties en systemen uniek en eenduidig te identificeren worden aan die partijen ’identificerende attributen’ uitgereikt. Meestal is dat een uniek nummer, zoals het BSN of het UZI nummer of BIG nummer voor personen. Op organisatieniveau worden vergelijkbare nummers uitgereikt, zoals het KvK nummer of het AGB nummer van een zorgaanbieder. Speciaal daartoe opgerichte organisaties worden belast met het uitreiken en beheren van dit soort identificerende attributen. Zij moeten bijvoorbeeld voorkomen dat een nummer tweemaal uitgegeven wordt.</p>
+                <p>Ook systemen krijgen unieke identificerende attributen. Een bekende is het zogenaamde ‘IP adres’. IP adressen zijn niet gegarandeerd uniek maar zijn wel gegarandeerd uniek binnen één netwerk, bijvoorbeeld het internet. Speciale organisaties zijn daarom ingericht om IP adressen uit te reiken aan computers die zijn verbinden via het internet. Immers; als twee computers over hetzelfde IP adres beschikken kunnen zij niet langer uniek worden geïdentificeerd.</p>
+                <p>Het IP adres is voor mensen moeilijk te onthouden. Computers en (koppelvlakken van) applicaties in een netwerk hebben daarom meestal ook een voor mensen leesbare naam. Een voorbeeld is ‘nl.wikipedia.org’ (de Nederlandse Wikipedia pagina) of ‘Meliushealthinformatics.nl’ (het adres van de Melius Health Informatics website). Ook voor het uitgeven van dit soort namen, domain names genoemd, op het internet zijn organisaties opgericht die de uniciteit van namen garanderen. Individuele computers of (koppelvlakken van) applicaties krijgen een naam die binnen een domein valt. Bijvoorbeeld ‘R1.meliushealthinformatics.nl’, waarbij R1 de naam van de computer binnen het meliushealthinformatics.nl domein is. Dit soort namen van computers worden ‘Fully Qualified Domain Names’ (FQDN) genoemd.</p>
+                <h3><a id="authenticatie">Authenticatie</a></h3>
+                <p>Iedereen een uniek nummer of unieke naam uitreiken is niet voldoende om te voorkomen dat informatie in verkeerde handen komt. Ik zou bijvoorbeeld het IP adres of de FQDN  van een computer kunnen aanpassen naar het adres van een andere computer, en zodoende proberen informatie af te tappen. Dit wordt ‘spoofing’ genoemd. Of ik zou kunnen doen alsof ik een arts met een bepaald UZI nummer ben. Naast dat iedere partij uniek en eenduidig geïdentificeerd moet kunnen worden, zijn ook mechanismes nodig om die identiteit te bewijzen. Dat wordt authenticatie genoemd.</p>
+                <p>De meeste mensen zijn bekend met authenticatie. Als je inlogt op je (web)mail moet je een username en wachtwoord opgeven. Soms is er naast een wachtwoord nog een tweede bewijs nodig, bijvoorbeeld een vingerafdruk of een code die wordt verstuurd. Dat wordt 2-factor authenticatie genoemd en is veiliger dan alleen een wachtwoord omdat wachtwoorden nu eenmaal kunnen worden gestolen.</p>
+                <p>Authenticatie van computers en (koppelvlakken van) applicaties is minder bekend en berust op een techniek die ‘Public Key Cryptography’ heet. Deze techniek vereist het gebruik van twee sleutels; een geheime (private) sleutel en een publieke sleutel. Identiteit kan worden bewezen door een bekend gegeven te versleutelen met de private sleutel. De publieke sleutel kan door andere partijen worden gebruikt om het versleutelde gegeven terug te ‘ontsleutelen’. Als deze overeenkomt met de het verwachte gegeven is bewezen dat  de partij die gegevens verstuurde (of opvroeg) beschikt over de private sleutel die bij zijn identiteit hoort.</p>
+                <p>Public Key Cryptography vereist de veilige distributie van private en publieke sleutels. Hiertoe wordt een samenwerkingsverband opgericht dat een Public Key Infrastructure (PKI) wordt genoemd. De sleutels worden gemaakt en uitgereikt door een ‘Certificate Authority’ binnen de PKI. UZI passen en -certificaten vallen onder de PKIOverheid en zijn zeer betrouwbaar.</p>
+                <p>De private sleutel is strikt vertrouwelijk en alleen bestemd voor de partij die zijn identiteit moet bewijzen. De publieke sleutel mag (zoals de naam al zegt) publiekelijk worden verspreid, maar dat wil nog steeds niet zeggen dat zij niet ook vertrouwelijk moet worden behandeld. Stel bijvoorbeeld dat een hacker in staat is om (de registratie van) publieke sleutels aan te passen, dan zou hij die zodanig kunnen aanpassen dat ze bij een andere private sleutel horen: een private sleutel die hij zelf heeft gemaakt en waarmee hij zich voordoet als een andere computer of applicatie. Om die reden worden ook publieke sleutels en bijbehorende gegevens veilig gedistribueerd en opgeslagen.</p>
+                <p>Sommige authenticatie van personen berust ook op public key cyrptography en een PKI. In de zorg is de UZI pas het bekendste voorbeeld. Op de UZI-pas staat de private key die behoort bij het unieke UZI nummer van de zorgverlener. Wanneer een bericht wordt uitgewisseld wordt de private sleutel op de pas gebruikt om iets te versleutelen, zodat de ontvangende partij (met de bijbehorende publieke sleutel) de identiteit van de zorgverlener kan verifiëren.</p>
+                <p>Technische afspraken en standaarden op het gebied van authenticatie beschrijven bijvoorbeeld de eisen aan een PKI, het formaat van encryptie sleutels en de wijze waarop authenticatiegegevens met een bericht kunnen worden meegezonden.  In de zorg worden vaak UZI servercertificaten gebruikt voor de authenticatie van koppelvlakken.</p>
+            </main>
+            <footer class="page-footer"><button onclick="javascript:history.go(-1)" class="navbutton">Vorige</button>
+                <button class="navbutton">Volgende </button> </footer-left></footer>
+        </div>
+    </section>
+</body>
+</html>

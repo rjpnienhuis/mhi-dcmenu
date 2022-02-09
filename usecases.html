@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Melius Health Informatics">
+    <title>Usecases</title>
+    <link rel="stylesheet" href="style/hmi-menu.css">
+    <link rel="stylesheet" href="style/simple_layout.css">
+    <link rel="icon" href="Images/favicon.png">
+</head>
+
+<body>
+    <section>
+        <div class="wrapper">
+            <header class="page-header"><a href="menu.html"> 
+                <button class="navbutton" style="float: right;">Menu</button>
+              </a><h1 style="float:left">Usecases</h1></header>
+            <main class="page-body">
+                <p>Een usecase beschrijft hoe systemen in een concrete situatie door betrokkenen gebruikt worden: wie kan met het betreffende systeem (systemen) wat doen? Het kiezen van een usecase is moeilijk. Als de usecase te specifiek is (een specifieke diagnose, specifieke behandeling) dan zijn er teveel usecases om ooit te automatiseren. Laat staan dat we het eens kunnen worden over de prioriteit. Als de usecase te generiek is, zal zij onvoldoende aansluiten bij de praktijk. Als de usecase te moeilijk en te groot is (en niet in kleine stapjes kan worden geïmplementeerd) is het risico op falen zeer groot. Als de usecase (of het stapje) te klein is, zullen zorgverleners en patiënten de meerwaarde onvoldoende merken.</p>
+                <h3>Wat is een goede usecase?</h3>
+                <p>Een goede usecase voldoet aan een aantal voorwaarden:</p>                            
+                <ul>
+                    <li>Rechtvaardiging: De usecase draagt bij aan een door iedereen gevoeld ‘hoger doel’. Bijvoorbeeld aan de strategie van betrokken organisaties (strategic fit). </li>
+                    <li>Wenselijkheid: De usecase lost problemen van direct betrokkenen (zorgverleners, patiënten, naasten) op én introduceert geen nieuwe problemen voor direct betrokkenen.</li>
+                    <li>Uitvoerbaarheid: De usecase is met de huidige stand van de techniek uitvoerbaar en bij voorkeur in stapjes op te delen.
+                    </li>
+                </ul>
+               
+                <p>Zoals blijkt uit de nevenstaande diagram bevindt de ideale usecase zich precies op het snijpunt van uitvoerbaarheid, wenselijkheid en rechtvaardiging. Houd bij het prioriteren van usecases rekening met deze drie aspecten.</p>               
+                <img src="Images/design-thinking.png" >
+                <p>Pas op voor de veelvoorkomende valkuilen in de diagram, zoals vaagheid bij het definiëren van wensen, of dingen roepen als ‘de techniek kan het probleem niet zijn’ (onbeargumenteerd optimisme).</p>
+                <h3>Hoe stel ik wenselijkheid vast?</h3>
+                <p>Wenselijkheid is iets anders dan rechtvaardiging. Wenselijkheid gaat over de behoeften en wensen van direct betrokkenen. Een aardige manier om ze vast te stellen is door een ‘actor / doel lijst’ op te stellen. </p>
+                <table>
+                    <tr>
+                        <th>Actor</th>
+                        <th>Doel</th>
+                        <th>Prioriteit</th>
+                    </tr>
+                    <tr>
+                        <td>Alle</td>
+                        <td>Op ieder moment actueel overzicht van de medicatie van patiënten in het eigen dossiervormend systeem</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Huisarts, Medisch specialist, thuiszorg</td>
+                        <td>Inzicht in thuismeetgegevens van patiënten vanuit eigen dossiervormend systeem</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Huisarts</td>
+                        <td>Inzicht in door de thuiszorg opgestelde behandelplan en rapportages vanuit HIS</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Huisarts</td>
+                        <td>Automatisch onboarden van patiënten in thuismeetprogramma’s vanuit HIS</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>....</td>
+                        <td>....</td>
+                        <td>....</td>
+                    </tr>
+                </table>
+                <h3>Hoe ontwikkel ik een usecase?</h3>
+                <p>Op hoofdlijnen kan het volgende proces worden gevolgd:</p>
+                <ul>
+                    <li>Start met het vaststellen van de dominante <a href="vormen-van-samenwerking.html">samenwerkingsvorm(en)</a> binnen de usecase. Stel ook vast welke <a href="medicatie-controle.html">’Medisch Service Centrum’ (MSC)</a> diensten nodig zijn. </li>
+                    <li>Bepaal welke types systemen (<a href="platforms-voor-samenwerking-uitwisseling.html">platforms</a> en <a href="ondersteunende-systemen.html">ondersteunende systemen</a>) passen bij de samenwerkingsvormen en MSC diensten.</li>
+                    <li>Bepaal welke <a href="koppelvlakken.html">koppelvlakken</a> met <a href="dossiervormende-systemen.html">dossiervormende systemen</a> nodig zijn</li>
+                    <li>Bepaal welke <a href="afspraken.html">afspraken</a> op zorginhoudelijk, organisatorisch of technisch niveau relevant zijn</li>
+                    <li>Voer een marktscan uit en detecteer ‘uitdagingen’</li>
+                    <li>Ontwikkel oplossingen voor uitdagingen en/ of manage verwachtingen</li>
+                    <li>Ontwikkel de usecase <a href="#agile">agile</a></li>
+                </ul>
+                <p>Mogelijke uitdagingen zijn bijvoorbeeld:</p>
+                <ul>
+                    <li>Geen van de gevonden (combinaties van) oplossingen sluit volledig aan bij de actor/ doel lijst</li>
+                    <li>De benodigde koppelvlakken zijn niet beschikbaar</li>
+                    <li>Partijen kunnen niet aan de benodigde (technische, zorginhoudelijke, organisatorische) afspraken voldoen</li>
+                </ul>
+                <h3><a id="agile">Wat is agile werken?</a></h3>
+                <p>Agile werken wil zeggen dat usecases in kleine iteraties ontwikkeld en getest worden. De focus ligt op maximaal leren en fail fast. Liever na twee weken ontdekken dat je de verkeerde weg in bent geslagen dan na een peperduur programma van twee jaar.</p>
+                <p>Agile werken betekent dat niet alle denkbare eisen en wensen in één keer gerealiseerd gaan worden, maar dat eerst gewerkt wordt aan een zogenaamd minimum viable product (MVP): de eisen die absoluut noodzakelijk zijn binnen een eerste versie van de usecase. Na die eerste versie worden continu nieuwe functionaliteiten toegevoegd en in de praktijk getest. Bij tegenvallende resultaten wordt direct bijgestuurd (fail fast). Continu meten (meten en verbeteren) is randvoorwaardelijk aan een agile werkwijze.</p>
+                <p>Agile werken wil niet zeggen dat er geen gedeelde visie of ‘stip op de horizon is’ maar wel dat die visie en die horizon zich continu aan kunnen passen aan hetgeen geleerd wordt tijdens de ontwikkeling. </p>
+                <h3>Met wie ontwikkel ik een usecase?</h3>
+                <p>Het ontwikkelen van een usecase is een multidisciplinair proces. Voor de ontwikkeling wordt een team samengesteld. Een team is tussen de 5 en 7 mensen groot. Waar nodig consulteert het team externe specialisten. Het team bestaat uit:</p>
+                <ul>
+                    <li>Een vertegenwoordiging van direct betrokkenen, dus van de eindgebruikers (zorgverleners, patiënten). Dit wordt meestal een product owner genoemd. Goede kandidaten zijn <a href="https://www.tue.nl/studeren/graduate-school/pdeng-clinical-informatics/opleiding-tot-klinisch-informaticus/">klinisch informatici</a>.</li>
+                    <li>Technisch specialisten die kennis hebben van de onderste lagen van het menu, de ontwikkelaar(s)</li>
+                    <li>Een tester</li>
+                    <li>Een coach, soms een <a href="https://agilescrumgroup.nl/verschil-scrum-master-en-een-projectleider/">SCRUM master</a> genoemd.</li>
+                    <li>Iemand met een <a href="https://www.youtube.com/watch?v=_r0VX-aU_T8">design thinking</a> of <a href="https://www.interaction-design.org/literature/topics/ux-design">User Experience (UX)</a> achtergrond</li>
+                </ul>
+                <h3>Hoe technisch complex is een usecase?</h3>
+                <p>De technische complexiteit van een usecase wordt beïnvloed door twee aspecten:</p>
+                <ul>
+                    <li>De mate waarin alles ‘geautomatiseerd’ moet verlopen.</li>
+                    <li>Hoe ingewikkeld informatiemanagement binnen de usecase is. Hoe meer verschillende actoren verantwoordelijk zijn voor het creëren, wijzigen, beheren en evalueren van informatie én hoe veelvormiger de informatie is, hoe complexer het domein.</li>
+                </ul>
+                <p>Door die twee aspecten in een diagram op de x-as en y-as te zetten ontstaan 4 kwadranten. Kwadrant 4 is het moeilijkst, kwadrant 1 het gemakkelijkst.</p>
+                <img src="images/gegevensuitwisseling-kwadrant1.png" >
+                <p>Agile werken betekent dat een roadmap wordt ontwikkeld die loopt van kwadrant 1 naar kwadrant 4 (via 2 en 3) en niet van kwadrant 4 naar kwadrant 1. De natuurlijke neiging van veel zorgverleners is om te kiezen voor een meer traditionele roadmap.  </p>
+                <img src="images/gegevensuitwisseling-kwadrant2.png">
+            </main>
+            <footer class="page-footer"><button onclick="javascript:history.go(-1)" class="navbutton">Vorige</button>
+                <button class="navbutton">Volgende </button> </footer-left></footer>
+        </div>
+    </section>
+</body>
+</html>

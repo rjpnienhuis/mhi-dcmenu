@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Melius Health Informatics">
+    <title>Een menukaart voor Digitale Samenwerking in de Zorg</title>
+    <link rel="icon" href="Images/favicon.png">
+    <link rel="stylesheet" href="style/hmi-menu.css">
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 3em 3fr 2fr 1fr 3em;
+            grid-template-rows: 1fr 2fr 2fr 1fr 1fr;
+            grid-gap:0.2em;
+            width: 100vw;
+            height: 100vh;            
+        }
+
+        .gebruik{
+            grid-column: 1;
+            grid-row: 1;
+            background-color: #0B3C60;
+            writing-mode:vertical-lr; 
+            text-orientation:sideways;
+        }
+        .usecases{
+            grid-column: 2/4;
+            grid-row: 1;
+            background-color: #0B3C60;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        .zorginhoudelijke-afspraken{
+            grid-column: 4;
+            grid-row: 1;
+            background-color: #0B3C60;
+        }
+        .afspraken{
+            grid-column: 5;
+            grid-row: 1/6;
+            background-color: #0B3C60;
+            writing-mode:vertical-lr; 
+            text-orientation:sideways;
+        }
+        .functionaliteit{
+            grid-column: 1;
+            grid-row: 2;
+            background-color: #0B3C60;
+            writing-mode:vertical-lr; 
+            text-orientation:sideways;
+        }
+        .samenwerking{
+            grid-column: 2;
+            grid-row: 2;
+            background-color: #0B3C60;
+        }
+        .msc{
+            grid-column: 3;
+            grid-row: 2;
+            background-color: #0B3C60;
+        }
+        .organisatorische-afspraken{
+            grid-column:4;
+            grid-row:2;
+            background-color: #0B3C60;
+        }
+        .centrale-systemen{
+            grid-column:1;
+            grid-row:3;  
+            background-color: #0B3C60; 
+            writing-mode:vertical-lr; 
+            text-orientation:sideways;             
+        }
+        .platforms{
+            grid-column: 2;
+            grid-row:3;
+            background-color: #0B3C60;
+        }
+        .ondersteunende-systemen{
+            grid-column:3;
+            grid-row:3;
+            background-color: #0B3C60;
+        }
+        .technische-afspraken{
+            grid-column: 4;
+            grid-row:3/5;
+            background-color: #0B3C60;
+        }
+        .informatie{
+            grid-column: 1;
+            grid-row:4/6;
+            background-color: #0B3C60;
+            writing-mode:vertical-lr; 
+            text-orientation:sideways;
+        }
+        .koppelvlakken{
+            grid-column: 2/4;
+            grid-row:4;
+            background-color: #0B3C60;
+        }
+        .xis{
+            grid-column: 2/4 ;
+            grid-row:5;
+            background-color: #0B3C60;
+        }
+        .platform-afspraken{
+            grid-column: 4;
+            grid-row: 5;
+            background-color: #0B3C60;
+        }
+        .menu-header{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            color: white;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="gebruik" ><a href="gebruik.html" class="menu-header" style="font-size: 1.5em;">Gebruik</a></div>
+        <div class="usecases" ><a href="gebruik.html" class="menu-header">Usecases</a>
+            <div style="width: 2em;height: 1em;background-color: white;">ddd</div>
+            <div style="width: 2em;height: 1em;background-color: white;">ddd</div>
+            <div style="width: 2em;height: 1em;background-color: white;">ddd</div>
+            <div style="width: 2em;height: 1em;background-color: white;">ddd</div>
+            <div style="width: 2em;height: 1em;background-color: white;">ddd</div>
+            <div style="width: 2em;height: 1em;background-color: white;">ddd</div>
+        </div>
+        <div class="zorginhoudelijke-afspraken" ><a href="gebruik.html" class="menu-header">zorginhoudelijke-afspraken</a></div>
+        <div class="afspraken" ><a href="gebruik.html" class="menu-header" style="font-size: 1.5em;">Afspraken</a></div>
+        <div class="functionaliteit" ><a href="gebruik.html" class="menu-header" style="font-size: 1.5em;">functionaliteit</a></div>
+        <div class="samenwerking" ><a href="gebruik.html" class="menu-header">Samenwerking</a></div>
+        <div class="msc" ><a href="gebruik.html" class="menu-header">Medisch Service Centrum</a></div>
+        <div class="organisatorische-afspraken" ><a href="gebruik.html" class="menu-header">organisatorische-afspraken</a></div>
+        <div class="centrale-systemen"><a href="gebruik.html" class="menu-header">Centrale systemen</a></div>
+        <div class="platforms" ><a href="gebruik.html" class="menu-header">Platforms voor samenwerking en uitwisseling</a></div>
+        <div class="ondersteunende-systemen" ><a href="gebruik.html" class="menu-header">Ondersteunende systemen</a></div>
+        <div class="technische-afspraken" ><a href="gebruik.html" class="menu-header">Technische afspraken</a></div>
+        <div class="informatie" ><a href="gebruik.html" class="menu-header" style="font-size: 1.5em;">Informatie</a></div>
+        <div class="koppelvlakken" ><a href="gebruik.html" class="menu-header">(Standaard)koppelvlakken</a></div>
+        <div class="xis" ><a href="gebruik.html" class="menu-header">Dossiervormende systemen (XIS)</a></div>
+        <div class="platform-afspraken" ><a href="gebruik.html" class="menu-header">Platform afspraken</a></div>
+    </div>
+
+</body>

@@ -96,6 +96,11 @@
             grid-column: 2;
             grid-row:3;
             background-color: #0B3C60;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 3em 3em 3em;
+            grid-gap:0.4em;
+            padding: 0.4em;
         }
         .ondersteunende-systemen{
             grid-column:3;
@@ -189,7 +194,16 @@
         </div>
         <div class="organisatorische-afspraken" ><a href="gebruik.html" class="menu-header">organisatorische-afspraken</a></div>
         <div class="centrale-systemen"><a href="gebruik.html" class="menu-header" style="font-size: 1.5em;" >Centrale systemen</a></div>
-        <div class="platforms" ><a href="gebruik.html" class="menu-header">Platforms voor samenwerking en uitwisseling</a></div>
+        <div class="platforms" ><a href="gebruik.html" class="menu-header" style="grid-column: 1/5;grid-row: 1;">Platforms voor samenwerking en uitwisseling</a>
+            <a href="zno-sharedcare.html" class="menu-option">ZNO/ Shared care omgeving</a>
+            <a href="transactie-platforms.html" class="menu-option">Transactie platforms</a>
+            <a href="portaal.html" class="menu-option">Portaal</a>
+            <a href="pgo.html" class="menu-option">PGO</a>
+            <a href="kis.html"  class="menu-option" style="grid-row: 3;">KIS</a>
+            <a href="hie-platform.html" class="menu-option" style="grid-row: 3;">HIE-platforms</a>
+            <a href="communicatie-platforms.html" class="menu-option" style="grid-row: 3;">Communicatie platforms</a>
+            <a href="suggesties" class="menu-option" style="grid-row: 3;">.....</a>
+        </div>
         <div class="ondersteunende-systemen" ><a href="gebruik.html" class="menu-header">Ondersteunende systemen</a></div>
         <div class="technische-afspraken" ><a href="gebruik.html" class="menu-header">Technische afspraken</a></div>
         <div class="informatie" ><a href="gebruik.html" class="menu-header" style="font-size: 1.5em;">Informatie</a></div>

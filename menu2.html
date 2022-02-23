@@ -23,15 +23,16 @@
             grid-row: 1;
             background-color: #0B3C60;
             writing-mode:vertical-lr; 
-            text-orientation:sideways;
+            transform: scale(-1);
+            padding: 0.3em;
         }
         .usecases{
             grid-column: 2/4;
             grid-row: 1;
             background-color: #0B3C60;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 7em 7em 7em 7em 7em 7em 7em 7em 7em;
+            grid-template-rows: 2em 3em;
             grid-gap:0.2em;
             padding: 0.2em;
         }
@@ -47,18 +48,25 @@
             background-color: #0B3C60;
             writing-mode:vertical-lr; 
             text-orientation:sideways;
+            padding: 0.3em;
         }
         .functionaliteit{
             grid-column: 1;
             grid-row: 2;
             background-color: #0B3C60;
             writing-mode:vertical-lr; 
-            text-orientation:sideways;
+            transform: scale(-1);
+            padding: 0.3em;
         }
         .samenwerking{
             grid-column: 2;
             grid-row: 2;
             background-color: #0B3C60;
+            display: grid;
+            grid-template-columns: 7em 7em 7em 7em 7em 7em;
+            grid-template-rows: 2em 3em 3em;
+            grid-gap:0.2em;
+            padding: 0.2em;
         }
         .msc{
             grid-column: 3;
@@ -75,7 +83,8 @@
             grid-row:3;  
             background-color: #0B3C60; 
             writing-mode:vertical-lr; 
-            text-orientation:sideways;             
+            transform: scale(-1);
+            padding: 0.3em;             
         }
         .platforms{
             grid-column: 2;
@@ -97,7 +106,8 @@
             grid-row:4/6;
             background-color: #0B3C60;
             writing-mode:vertical-lr; 
-            text-orientation:sideways;
+            transform: scale(-1);
+            padding: 0.3em;
         }
         .koppelvlakken{
             grid-column: 2/4;
@@ -122,6 +132,15 @@
             font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
         }
 
+        .menu-option{
+            width: auto;
+            height: auto;
+            background-color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
     </style>
 </head>
@@ -129,12 +148,12 @@
     <div class="container">
         <div class="gebruik" ><a href="gebruik.html" class="menu-header" style="font-size: 1.5em;">Gebruik</a></div>
         <div class="usecases" ><a href="gebruik.html" class="menu-header" style="grid-column: 1/11;grid-row: 1;">Usecases</a>
-            <div style="width: auto;height: auto;background-color: white;">ddd</div>
-            <div style="width: auto;height: auto;background-color: white;">ddd</div>
-            <div style="width: auto;height: auto;background-color: white;">ddd</div>
-            <div style="width: auto;height: auto;background-color: white;">ddd</div>
-            <div style="width: auto;height: auto;background-color: white;">ddd</div>
-            <div style="width: auto;height: auto;background-color: white;">ddd</div>
+            <div class="menu-option">Medicatie management</div>
+            <div class="menu-option">Regionaal tumor board</div>
+            <div class="menu-option">Overdracht thorax chirurgie</div>
+            <div class="menu-option">.....</div>
+            <div class="menu-option">.....</div>
+            <div class="menu-option">.....</div>
         </div>
         <div class="zorginhoudelijke-afspraken" ><a href="gebruik.html" class="menu-header">zorginhoudelijke-afspraken</a></div>
         <div class="afspraken" ><a href="gebruik.html" class="menu-header" style="font-size: 1.5em;">Afspraken</a></div>

@@ -33,7 +33,7 @@
             background-color: #0B3C60;
             display: grid;
             grid-template-columns: repeat(8, 1fr);
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: repeat(3, 1fr);
             grid-gap:0.4em;
             padding: 0.4em;
         }
@@ -42,6 +42,11 @@
             grid-column: 4;
             grid-row: 1;
             background-color: #0B3C60;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3,  1fr) ;
+            grid-gap:0.4em;
+            padding: 0.4em;
         }
         .afspraken{
             grid-column: 5;
@@ -65,7 +70,7 @@
             background-color: #0B3C60;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-rows: repeat(4,  1fr) ;
             grid-gap:0.4em;
             padding: 0.4em;
         }
@@ -83,6 +88,11 @@
             grid-column:4;
             grid-row:2;
             background-color: #0B3C60;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-gap:0.4em;
+            padding: 0.4em;
         }
         .centrale-systemen{
             grid-column:1;
@@ -98,7 +108,7 @@
             background-color: #0B3C60;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: 1fr 1fr 1fr ;
+            grid-template-rows: repeat(4,  1fr) ;
             grid-gap:0.4em;
             padding: 0.4em;
         }
@@ -116,6 +126,11 @@
             grid-column: 4;
             grid-row:3/5;
             background-color: #0B3C60;
+            display: grid;
+            grid-template-columns:  1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-gap:0.4em;
+            padding: 0.4em;
         }
         .informatie{
             grid-column: 1;
@@ -165,6 +180,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            color: black;
+            text-decoration: none;
         }
 
 
@@ -183,7 +200,12 @@
             <a href="suggesties.html" class="menu-option">.....</a>
             <a href="suggesties.html" class="menu-option">.....</a>
         </div>
-        <div class="zorginhoudelijke-afspraken" ><a href="zorginhoudelijke-afspraken.html" class="menu-header">zorginhoudelijke-afspraken</a></div>
+        <div class="zorginhoudelijke-afspraken" ><a href="zorginhoudelijke-afspraken.html" class="menu-header" style="grid-column: 1/3;grid-row: 1;">zorginhoudelijke-afspraken</a>
+            <a href="domein-modellen.html" class="menu-option">Domein modellen</a>
+            <a href="kwaliteits-standaarden.html" class="menu-option">Kwaliteits-standaarden</a>
+            <a href="datasets.html" class="menu-option">Datasets</a>
+            <a href="terminologie.html" class="menu-option">Terminologie</a>
+        </div>
         <div class="afspraken" ><a href="afspraken.html" class="menu-header" style="font-size: 1.5em;">Afspraken</a></div>
         <div class="functionaliteit" ><a href="functionaliteit.html" class="menu-header" style="font-size: 1.5em;">Functionaliteit</a></div>
         <div class="samenwerking" ><a href="vormen-van-samenwerking.html" class="menu-header" style="grid-column: 1/7;grid-row: 1;">Samenwerking</a>
@@ -207,7 +229,12 @@
             <a href="suggesties.html" class="menu-option" style="grid-row: 4;">.....</a>
             <a href="suggesties.html" class="menu-option" style="grid-row: 4;">.....</a>
         </div>
-        <div class="organisatorische-afspraken" ><a href="organisatorische-afspraken.html" class="menu-header">organisatorische-afspraken</a></div>
+        <div class="organisatorische-afspraken" ><a href="organisatorische-afspraken.html" class="menu-header" style="grid-column: 1/3;grid-row: 1;">organisatorische-afspraken</a>
+            <a href="sla.html" class="menu-option">SLA</a>
+            <a href="vwo.html" class="menu-option">VWO</a>
+            <a href="wettelijke-kaders.html" class="menu-option">Wettelijke kaders</a>
+            <a href="srm.html" class="menu-option">Shared responsibilities</a>
+        </div>
         <div class="centrale-systemen"><a href="centrale-systemen.html" class="menu-header" style="font-size: 1.5em;" >Centrale systemen</a></div>
         <div class="platforms" >
             <div style="grid-column: 1/5;grid-row: 1;">
@@ -242,7 +269,19 @@
             <a href="ai-algoritmes.html" class="menu-option" style="grid-row: 4;">AI-algoritmes</a>
             <a href="suggesties.html" class="menu-option" style="grid-row: 4;">.....</a>
         </div>
-        <div class="technische-afspraken" ><a href="technische-afspraken.html" class="menu-header">Technische afspraken</a></div>
+        <div class="technische-afspraken" >
+           
+            <div>
+                <a href="controverse-technische-afspraken.html" style="float:right">
+                    <img src="Images/warning-sign-icon.png" style="width:1.5em;"/>
+                </a>
+                <a href="technische-afspraken.html" class="menu-header">Technische afspraken</a>
+            </div>
+            <a href="epd.html" class="menu-option" style="clear: both;">Integratie-profielen</a>
+            <a href="ecd.html" class="menu-option">Interface</a>
+            <a href="his.html" class="menu-option">Vertrouwen</a>
+            <a href="hapis.html" class="menu-option">Transport</a>
+        </div>
         <div class="informatie" ><a href="informatie.html" class="menu-header" style="font-size: 1.5em;">Informatie</a></div>
         <div class="koppelvlakken" >            
             <div style="grid-column: 1/9;grid-row: 1;">

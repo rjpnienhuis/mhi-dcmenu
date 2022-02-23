@@ -11,11 +11,12 @@
     <style>
         .container{
             display: grid;
-            grid-template-columns: 3em 3fr 2fr 1fr 3em;
+            grid-template-columns: 3em 2.7fr 2.3fr 1fr 3em;
             grid-template-rows: 1fr 2fr 2fr 1fr 1fr;
             grid-gap:0.2em;
             width: 98vw;
-            height: 98vh;            
+            height: 98vh;   
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;         
         }
 
         .gebruik{
@@ -31,10 +32,10 @@
             grid-row: 1;
             background-color: #0B3C60;
             display: grid;
-            grid-template-columns: 7em 7em 7em 7em 7em 7em 7em 7em 7em;
-            grid-template-rows: 2em 3em;
-            grid-gap:0.2em;
-            padding: 0.2em;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: 3em 3em;
+            grid-gap:0.4em;
+            padding: 0.4em;
         }
 
         .zorginhoudelijke-afspraken{
@@ -63,15 +64,20 @@
             grid-row: 2;
             background-color: #0B3C60;
             display: grid;
-            grid-template-columns: 7em 7em 7em 7em 7em 7em;
-            grid-template-rows: 2em 3em 3em;
-            grid-gap:0.2em;
-            padding: 0.2em;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 3em 3em 3em;
+            grid-gap:0.4em;
+            padding: 0.4em;
         }
         .msc{
             grid-column: 3;
             grid-row: 2;
             background-color: #0B3C60;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 3em 3em 3em 3em;
+            grid-gap:0.4em;
+            padding: 0.4em;
         }
         .organisatorische-afspraken{
             grid-column:4;
@@ -129,7 +135,6 @@
             display: flex;
             justify-content: center;
             color: white;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
         }
 
         .menu-option{
@@ -142,24 +147,46 @@
             align-items: center;
         }
 
+
     </style>
 </head>
 <body>
     <div class="container">
         <div class="gebruik" ><a href="gebruik.html" class="menu-header" style="font-size: 1.5em;">Gebruik</a></div>
         <div class="usecases" ><a href="gebruik.html" class="menu-header" style="grid-column: 1/11;grid-row: 1;">Usecases</a>
-            <div class="menu-option">Medicatie management</div>
-            <div class="menu-option">Regionaal tumor board</div>
-            <div class="menu-option">Overdracht thorax chirurgie</div>
-            <div class="menu-option">.....</div>
-            <div class="menu-option">.....</div>
-            <div class="menu-option">.....</div>
+            <a href="medicatie-management.html" class="menu-option">Medicatie management</a>
+            <a href="regionaal-tumorboard.html" class="menu-option">Regionaal tumor board</a>
+            <a href="overdracht-thorax-chirurgie.html" class="menu-option">Overdracht thorax chirurgie</a>
+            <a href="suggesties.html" class="menu-option">.....</a>
+            <a href="suggesties.html" class="menu-option">.....</a>
+            <a href="suggesties.html" class="menu-option">.....</a>
+            <a href="suggesties.html" class="menu-option">.....</a>
+            <a href="suggesties.html" class="menu-option">.....</a>
         </div>
         <div class="zorginhoudelijke-afspraken" ><a href="gebruik.html" class="menu-header">zorginhoudelijke-afspraken</a></div>
         <div class="afspraken" ><a href="gebruik.html" class="menu-header" style="font-size: 1.5em;">Afspraken</a></div>
         <div class="functionaliteit" ><a href="gebruik.html" class="menu-header" style="font-size: 1.5em;">Functionaliteit</a></div>
-        <div class="samenwerking" ><a href="gebruik.html" class="menu-header">Samenwerking</a></div>
-        <div class="msc" ><a href="gebruik.html" class="menu-header">Medisch Service Centrum</a></div>
+        <div class="samenwerking" ><a href="gebruik.html" class="menu-header" style="grid-column: 1/7;grid-row: 1;">Samenwerking</a>
+            <a href="verwijzen-overdragen.html" class="menu-option">Verwijzen/ overdragen</a>
+            <a href="consulteren.html" class="menu-option">Consulteren</a>
+            <a href="shared-care.html" class="menu-option">Shared care</a>
+            <a href="ad-hoc-inzage.html" class="menu-option">Ad hoc inzage</a>
+            <a href="aanvragen.html"  class="menu-option" style="grid-row: 3;">Aanvragen</a>
+            <a href="meekijken.html" class="menu-option" style="grid-row: 3;">Meekijken</a>
+            <a href="mdo.html" class="menu-option" style="grid-row: 3;">MDO</a>
+            <a href="suggesties" class="menu-option" style="grid-row: 3;">.....</a>
+        </div>1
+        <div class="msc" ><a href="gebruik.html" class="menu-header" style="grid-column: 1/4;grid-row: 1;">Medisch Service Centrum</a>
+            <a href="monitoring-coaching.html" class="menu-option">Monitoring & coaching</a>
+            <a href="personen-alarmering.html" class="menu-option">Personen alarmering</a>
+            <a href="digitaal-contact.html" class="menu-option">Digitaal contact</a>
+            <a href="medicatie-controle.html" class="menu-option" style="grid-row: 3;">Medicatie controle</a>
+            <a href="video-monitoring.html" class="menu-option" style="grid-row: 3;">Video-monitoring</a>
+            <a href="populatie-management.html" class="menu-option" style="grid-row: 3;">Populatie management</a>
+            <a href="sensoring.html" class="menu-option" style="grid-row: 4;">Sensoring</a>
+            <a href="suggesties.html" class="menu-option" style="grid-row: 4;">.....</a>
+            <a href="suggesties.html" class="menu-option" style="grid-row: 4;">.....</a>
+        </div>
         <div class="organisatorische-afspraken" ><a href="gebruik.html" class="menu-header">organisatorische-afspraken</a></div>
         <div class="centrale-systemen"><a href="gebruik.html" class="menu-header" style="font-size: 1.5em;" >Centrale systemen</a></div>
         <div class="platforms" ><a href="gebruik.html" class="menu-header">Platforms voor samenwerking en uitwisseling</a></div>

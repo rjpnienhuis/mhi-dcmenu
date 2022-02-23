@@ -33,7 +33,7 @@
             background-color: #0B3C60;
             display: grid;
             grid-template-columns: repeat(8, 1fr);
-            grid-template-rows: 3em 3em;
+            grid-template-rows: 1fr 1fr;
             grid-gap:0.4em;
             padding: 0.4em;
         }
@@ -65,7 +65,7 @@
             background-color: #0B3C60;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: 3em 3em 3em;
+            grid-template-rows: 1fr 1fr 1fr;
             grid-gap:0.4em;
             padding: 0.4em;
         }
@@ -75,7 +75,7 @@
             background-color: #0B3C60;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 3em 3em 3em 3em;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
             grid-gap:0.4em;
             padding: 0.4em;
         }
@@ -98,7 +98,7 @@
             background-color: #0B3C60;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: 3em 3em 3em;
+            grid-template-rows: 1fr 1fr 1fr ;
             grid-gap:0.4em;
             padding: 0.4em;
         }
@@ -108,7 +108,7 @@
             background-color: #0B3C60;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 3em 3em 3em 3em;
+            grid-template-rows: 1fr 1fr 1fr 1fr ;
             grid-gap:0.4em;
             padding: 0.4em;
         }
@@ -129,11 +129,21 @@
             grid-column: 2/4;
             grid-row:4;
             background-color: #0B3C60;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: 1fr 1fr;
+            grid-gap:0.4em;
+            padding: 0.4em;
         }
         .xis{
             grid-column: 2/4 ;
             grid-row:5;
             background-color: #0B3C60;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: 1fr 1fr;
+            grid-gap:0.4em;
+            padding: 0.4em;
         }
         .platform-afspraken{
             grid-column: 4;
@@ -199,8 +209,14 @@
         </div>
         <div class="organisatorische-afspraken" ><a href="organisatorische-afspraken.html" class="menu-header">organisatorische-afspraken</a></div>
         <div class="centrale-systemen"><a href="centrale-systemen.html" class="menu-header" style="font-size: 1.5em;" >Centrale systemen</a></div>
-        <div class="platforms" ><a href="platforms-voor-samenwerking-uitwisseling.html" class="menu-header" style="grid-column: 1/5;grid-row: 1;">Platforms voor samenwerking en uitwisseling</a>
-            <a href="zno-sharedcare.html" class="menu-option">ZNO/ Shared care omgeving</a>
+        <div class="platforms" >
+            <div style="grid-column: 1/5;grid-row: 1;">
+                <a href="controverse-platforms-voor-samenwerking.html" style="float:right">
+                    <img src="Images/warning-sign-icon.png" style="width:1.5em;"/>
+                </a>
+                <a href="platforms-voor-samenwerking-uitwisseling.html" class="menu-header">Platforms voor samenwerking en uitwisseling</a>
+            </div>
+            <a href="zno-sharedcare.html" class="menu-option"  style="clear:both;">ZNO/ Shared care omgeving</a>
             <a href="transactie-platforms.html" class="menu-option">Transactie platforms</a>
             <a href="portaal.html" class="menu-option">Portaal</a>
             <a href="pgo.html" class="menu-option">PGO</a>
@@ -209,8 +225,14 @@
             <a href="communicatie-platforms.html" class="menu-option" style="grid-row: 3;">Communicatie platforms</a>
             <a href="suggesties" class="menu-option" style="grid-row: 3;">.....</a>
         </div>
-        <div class="ondersteunende-systemen" ><a href="ondersteunende-systemen.html" class="menu-header" style="grid-column: 1/4;grid-row: 1;">Ondersteunende systemen</a>
-            <a href="digitale-zorg-apps.html" class="menu-option">Digitale zorg apps</a>
+        <div class="ondersteunende-systemen" >        
+            <div style="grid-column: 1/4;grid-row: 1;">
+                <a href="controverse-ondersteunende-systemen.html" style="float:right">
+                    <img src="Images/warning-sign-icon.png" style="width:1.5em;"/>
+                </a>
+                <a href="platforms-voor-samenwerking-uitwisseling.html" class="menu-header">Ondersteunende systemen</a>
+            </div>
+            <a href="digitale-zorg-apps.html" class="menu-option" style="clear:both">Digitale zorg apps</a>
             <a href="dataplatform.html" class="menu-option">Dataplatform</a>
             <a href="crm-platform.html" class="menu-option">CRM platform</a>
             <a href="rpa.html" class="menu-option" style="grid-row: 3;">RPA</a>
@@ -222,9 +244,33 @@
         </div>
         <div class="technische-afspraken" ><a href="technische-afspraken.html" class="menu-header">Technische afspraken</a></div>
         <div class="informatie" ><a href="informatie.html" class="menu-header" style="font-size: 1.5em;">Informatie</a></div>
-        <div class="koppelvlakken" ><a href="koppelvlakken.html" class="menu-header">(Standaard)koppelvlakken</a></div>
-        <div class="xis" ><a href="dossiervormende-systemen.html" class="menu-header">Dossiervormende systemen (XIS)</a></div>
+        <div class="koppelvlakken" >            
+            <div style="grid-column: 1/9;grid-row: 1;">
+                <a href="controverse-koppelvlakken.html" style="float:right">
+                    <img src="Images/warning-sign-icon.png" style="width:1.5em;"/>
+                </a>
+                <a href="koppelvlakken.html" class="menu-header">(Standaard)koppelvlakken)</a>
+            </div>
+            <a href="dvza.html" class="menu-option" style="clear: both;">DVZA</a>
+            <a href="nuts-node.html" class="menu-option">NUTS Node</a>
+            <a href="ihe.html" class="menu-option">IHE X*</a>
+            <a href="twiin.html" class="menu-option">TWIIN</a>
+            <a href="fhir.html" class="menu-option">Eigen FHIR koppelvlakken</a>
+            <a href="lsp.html" class="menu-option">LSP koppelvlakken</a>
+            <a href="visuele-koppelvlakken.html" class="menu-option">Visuele koppelvlakken</a>
+            <a href="suggesties.html" class="menu-option">.....</a>
+        </div>
+        <div class="xis">
+            <a href="dossiervormende-systemen.html" class="menu-header" style="grid-column: 1/11;grid-row: 1;">Dossiervormende systemen (XIS)</a>
+            <a href="epd.html" class="menu-option" style="clear: both;">EPD</a>
+            <a href="ecd.html" class="menu-option">ECD</a>
+            <a href="his.html" class="menu-option">HIS</a>
+            <a href="hapis.html" class="menu-option">HAPIS</a>
+            <a href="ais.html" class="menu-option">AIS</a>
+            <a href="lis.html" class="menu-option">LIS</a>
+            <a href="suggesties.html" class="menu-option">.....</a>
+            <a href="suggesties.html" class="menu-option">.....</a>
+        </div>
         <div class="platform-afspraken" ><a href="platform-afspraken.html" class="menu-header">Platform afspraken</a></div>
     </div>
-
 </body>

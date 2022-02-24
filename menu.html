@@ -186,7 +186,7 @@
 
         .slide {
           clear:both;
-          width:12em;
+          width:auto;
           height:0px;
           overflow: hidden;
           text-align: center;
@@ -218,7 +218,7 @@
                 e.preventDefault();
                 const rect = element.getBoundingClientRect();
                 dpm.style.height="10em";
-                dpm.style.width=element.clientWidth +"px";
+                dpm.style.minWidth=element.clientWidth +"px";
                 dpm.style.left= rect.left + "px";
                 dpm.style.top=rect.top+element.clientHeight + "px";                
                 document.getElementById("dpmenu-info").href=element.dataset.info;

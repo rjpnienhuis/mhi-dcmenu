@@ -200,7 +200,7 @@
           list-style-type:none;  
         }
 
-        .slide li {padding : 20px;margin: 0px;}
+        .slide li {padding : 1em;margin: 0px;}
         .slide li a{
           color: white;
           text-decoration: none; 
@@ -220,11 +220,11 @@
                 const rect = element.getBoundingClientRect();
                 if(rect.top > (document.documentElement.clientHeight/2)){
                     var size = parseFloat(getComputedStyle(element).fontSize);
-                    dpm.style.top=rect.top - (size*10)+ "px";  
+                    dpm.style.top=rect.top - (size*13)+ "px";  
                 }else{
                     dpm.style.top=rect.top+element.clientHeight + "px";   
                 }
-                dpm.style.height="10em";
+                dpm.style.height="13em";
                 dpm.style.minWidth=element.clientWidth +"px";
                 dpm.style.left= rect.left + "px";      
                 document.getElementById("dpmenu-info").href=element.dataset.info;
@@ -235,8 +235,9 @@
   
   </nav> 
     <ul id="dpmenu" class="slide">
-        <li><a id="dpmenu-info" href="#" >Informatie</a></li>
-        <li><a id="dpmenu-agenda" href="#" >Agenda</a></li>
+        <li><a id="dpmenu-info" href="#" >Wat?</a></li>
+        <li><a id="dpmenu-agenda" href="#" >Wie?</a></li>
+        <li><a id="dpmenu-agenda" href="#" >Wanneer?</a></li>
         <li><a href="#">Sluiten</a></li>
     </ul>
     <div class="container">

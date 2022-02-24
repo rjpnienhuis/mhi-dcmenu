@@ -47,7 +47,8 @@ tr:nth-child(even) {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 30px;
-  width:7em;
+  width:auto;
+  min-width: 7em;
 }
 
 button:disabled{

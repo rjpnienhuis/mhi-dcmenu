@@ -188,6 +188,24 @@
     </style>
 </head>
 <body>
+    <script>
+        document.querySelector("body").addEventListener('click', function(e) {
+            var element = e.target;
+            if(element.dataset.info !=null){
+                e.preventDefault();
+                const rect = element.getBoundingClientRect();
+
+                var dpm = document.getElementById("dpmenu");
+                dpm.style.display="block";
+                dpm.style.left= rect.left + "px";
+                dpm.style.top=rect.top+e.target.clientHeight + "px";                
+                document.getElementById("dpmenu-info").href=element.dataset.info;
+            }
+        }, false);
+    </script>
+    <ul id="dpmenu" class="menu-option" style="display: none;position:absolute; z-index: 999;">
+        <li><a id="dpmenu-info" href="info">Informatie</a></li>
+    </ul>
     <div class="container">
         <div class="gebruik" ><a href="gebruik.html" class="menu-header" style="font-size: 1.4em;">Gebruik</a></div>
         <div class="usecases" ><a href="usecases.html" class="menu-header" style="grid-column: 1/11;grid-row: 1;">Usecases</a>
@@ -209,7 +227,7 @@
         <div class="afspraken" ><a href="afspraken.html" class="menu-header" style="font-size: 1.4em;">Afspraken</a></div>
         <div class="functionaliteit" ><a href="functionaliteit.html" class="menu-header" style="font-size: 1.4em;">Functionaliteit</a></div>
         <div class="samenwerking" ><a href="vormen-van-samenwerking.html" class="menu-header" style="grid-column: 1/7;grid-row: 1;">Samenwerking</a>
-            <a href="verwijzen-overdragen.html" class="menu-option">Verwijzen/ overdragen</a>
+            <a href="verwijzen-overdragen.html" class="menu-option" data-info="verwijzen-overdragen.html">Verwijzen/ overdragen</a>
             <a href="consulteren.html" class="menu-option">Consulteren</a>
             <a href="shared-care.html" class="menu-option">Shared care</a>
             <a href="ad-hoc-inzage.html" class="menu-option">Ad hoc inzage</a>
@@ -294,9 +312,9 @@
             <a href="nuts-node.html" class="menu-option">NUTS Node</a>
             <a href="ihe.html" class="menu-option">IHE X*</a>
             <a href="twiin.html" class="menu-option">TWIIN</a>
-            <a href="fhir.html" class="menu-option">Eigen FHIR koppelvlakken</a>
-            <a href="lsp.html" class="menu-option">LSP koppelvlakken</a>
-            <a href="visuele-koppelvlakken.html" class="menu-option">Visuele koppelvlakken</a>
+            <a href="fhir.html" class="menu-option"> FHIR </a>
+            <a href="lsp.html" class="menu-option">LSP</a>
+            <a href="visuele-koppelvlakken.html" class="menu-option">Visueel</a>
             <a href="suggesties.html" class="menu-option">.....</a>
         </div>
         <div class="xis">

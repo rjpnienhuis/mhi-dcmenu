@@ -184,27 +184,54 @@
             text-decoration: none;
         }
 
+        .slide {
+          clear:both;
+          width:12em;
+          height:0px;
+          overflow: hidden;
+          text-align: center;
+          transition: height .5s ease;
+          padding: 0px;
+          margin: 0px;
+          position:absolute; 
+          z-index: 999;
+          background : #2d2f31;
+          list-style-type:none
+        }
 
+        .slide li {padding : 20px;margin: 0px;}
+        .slide li a{
+          color: white;
+          text-decoration: none; 
+          text-align: center;
+        }
     </style>
 </head>
 <body>
     <script>
         document.querySelector("body").addEventListener('click', function(e) {
+          var dpm = document.getElementById("dpmenu");
+          dpm.style.height="0px";
+
             var element = e.target;
             if(element.dataset.info !=null){
                 e.preventDefault();
                 const rect = element.getBoundingClientRect();
-
-                var dpm = document.getElementById("dpmenu");
-                dpm.style.display="block";
+                dpm.style.height="10em";
+                dpm.style.width=element.clientWidth +"px";
                 dpm.style.left= rect.left + "px";
-                dpm.style.top=rect.top+e.target.clientHeight + "px";                
+                dpm.style.top=rect.top+element.clientHeight + "px";                
                 document.getElementById("dpmenu-info").href=element.dataset.info;
             }
         }, false);
     </script>
-    <ul id="dpmenu" class="menu-option" style="display: none;position:absolute; z-index: 999;">
-        <li><a id="dpmenu-info" href="info">Informatie</a></li>
+
+  
+  </nav> 
+    <ul id="dpmenu" class="slide">
+        <li><a id="dpmenu-info" href="#" >Informatie</a></li>
+        <li><a id="dpmenu-agenda" href="#" >Agenda</a></li>
+        <li><a href="#">Sluiten</a></li>
     </ul>
     <div class="container">
         <div class="gebruik" ><a href="gebruik.html" class="menu-header" style="font-size: 1.4em;">Gebruik</a></div>

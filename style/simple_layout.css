@@ -24,6 +24,8 @@ section {
   min-height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .page-header,
@@ -31,6 +33,7 @@ section {
 
   padding: 20px;
 }
+
 
 .page-body {
   padding: 20px;

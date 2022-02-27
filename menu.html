@@ -9,12 +9,14 @@
     <link rel="icon" href="Images/favicon.png">
     <link rel="stylesheet" href="style/hmi-menu.css">
     <style>
+        body{
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;  
+        }
         .container{
             display: grid;
             grid-template-columns: 3em 2.7fr 2.3fr 1fr 3em;
             grid-template-rows: 1fr 2fr 2fr 1fr 1fr;
-            grid-gap:0.2em;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;      
+            grid-gap:0.2em;   
             width: 98vw;
             height: 98vh;      
         }
@@ -184,27 +186,59 @@
             text-decoration: none;
         }
 
+        .slide {
+          clear:both;
+          width:auto;
+          height:0px;
+          overflow: hidden;
+          text-align: center;
+          transition: height .5s ease;
+          padding: 0px;
+          margin: 0px;
+          position:absolute; 
+          background : #2d2f31;
+          list-style-type:none;  
+        }
 
+        .slide li {padding : 1em;margin: 0px;}
+        .slide li a{
+          color: white;
+          text-decoration: none; 
+          text-align: center;
+        }
     </style>
 </head>
 <body>
     <script>
         document.querySelector("body").addEventListener('click', function(e) {
+          var dpm = document.getElementById("dpmenu");
+          dpm.style.height="0px";
+
             var element = e.target;
             if(element.dataset.info !=null){
                 e.preventDefault();
                 const rect = element.getBoundingClientRect();
-
-                var dpm = document.getElementById("dpmenu");
-                dpm.style.display="block";
-                dpm.style.left= rect.left + "px";
-                dpm.style.top=rect.top+e.target.clientHeight + "px";                
+                if(rect.top > (document.documentElement.clientHeight/2)){
+                    var size = parseFloat(getComputedStyle(element).fontSize);
+                    dpm.style.top=rect.top - (size*13)+ "px";  
+                }else{
+                    dpm.style.top=rect.top+element.clientHeight + "px";   
+                }
+                dpm.style.height="13em";
+                dpm.style.minWidth=element.clientWidth +"px";
+                dpm.style.left= rect.left + "px";      
                 document.getElementById("dpmenu-info").href=element.dataset.info;
             }
         }, false);
     </script>
-    <ul id="dpmenu" class="menu-option" style="display: none;position:absolute; z-index: 999;">
-        <li><a id="dpmenu-info" href="info">Informatie</a></li>
+
+  
+  </nav> 
+    <ul id="dpmenu" class="slide">
+        <li><a id="dpmenu-info" href="#" >Wat?</a></li>
+        <li><a id="dpmenu-agenda" href="#" >Wie?</a></li>
+        <li><a id="dpmenu-agenda" href="#" >Wanneer?</a></li>
+        <li><a href="#">Sluiten</a></li>
     </ul>
     <div class="container">
         <div class="gebruik" ><a href="gebruik.html" class="menu-header" style="font-size: 1.4em;">Gebruik</a></div>
@@ -319,7 +353,7 @@
         </div>
         <div class="xis">
             <a href="dossiervormende-systemen.html" class="menu-header" style="grid-column: 1/11;grid-row: 1;">Dossiervormende systemen (XIS)</a>
-            <a href="epd.html" class="menu-option" style="clear: both;">EPD</a>
+            <a href="epd.html" class="menu-option" style="clear: both;" data-info="epd.html">EPD</a>
             <a href="ecd.html" class="menu-option">ECD</a>
             <a href="his.html" class="menu-option">HIS</a>
             <a href="hapis.html" class="menu-option">HAPIS</a>

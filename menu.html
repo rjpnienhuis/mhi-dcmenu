@@ -214,7 +214,7 @@
           dpm.style.width="0px";
           var menu = document.getElementById("mainmenu");
           menu.style.width="0px";
-
+          var ypos = 0-document.body.getBoundingClientRect().top;
             var element = e.target;
             if(element.dataset.info !=null){
                 e.preventDefault();
@@ -228,10 +228,12 @@
                // dpm.style.height="13em";
                // dpm.style.minWidth=element.clientWidth +"px";
                // dpm.style.left= rect.left + "px";      
-                dpm.style.width="40vh";
+               dpm.style.top=ypos+"px";
+               dpm.style.width="40vh";
                 document.getElementById("dpmenu-info").href=element.dataset.info;
             }else if(element.id=="menubutton"){
-                e.preventDefault();   
+                e.preventDefault();
+                menu.style.top=ypos+"px";  
                 menu.style.width="40vh";
             }
         }, false);

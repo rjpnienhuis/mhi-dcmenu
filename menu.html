@@ -210,27 +210,22 @@
 <body>
     <script>
         document.querySelector("body").addEventListener('click', function(e) {
-          var dpm = document.getElementById("dpmenu");          
-          dpm.style.width="0px";
-          var menu = document.getElementById("mainmenu");
-          menu.style.width="0px";
-          var ypos = 0-document.body.getBoundingClientRect().top;
             var element = e.target;
+            if(element.id=="searchinput" ){
+                return;
+            }
+            var dpm = document.getElementById("dpmenu");          
+            dpm.style.width="0px";
+            var menu = document.getElementById("mainmenu");
+            menu.style.width="0px";
+            var ypos = 0-document.body.getBoundingClientRect().top;
+            
             if(element.dataset.info !=null){
                 e.preventDefault();
-                //const rect = element.getBoundingClientRect();
-                //if(rect.top > (document.documentElement.clientHeight/2)){
-                //    var size = parseFloat(getComputedStyle(element).fontSize);
-                //    dpm.style.top=rect.top - (size*13)+ "px";  
-                //}else{
-                //    dpm.style.top=rect.top+element.clientHeight + "px";   
-               // }
-               // dpm.style.height="13em";
-               // dpm.style.minWidth=element.clientWidth +"px";
-               // dpm.style.left= rect.left + "px";      
                dpm.style.top=ypos+"px";
                dpm.style.width="40vh";
                 document.getElementById("dpmenu-info").href=element.dataset.info;
+                document.getElementById("dpmenu-info").innerHTML=element.dataset.caption;
             }else if(element.id=="menubutton"){
                 e.preventDefault();
                 menu.style.top=ypos+"px";  
@@ -240,14 +235,16 @@
     </script>
 
   
-  </nav> 
-    <ul id="mainmenu" class="slide" style="z-index:999;height: 98vh;width:0px;transition: width .5s ease;">
-        <li><a href="index.html" >Home</a></li>
-        <li><a href="#" >Over deze menukaart</a></li>
-        <li><a href="#" >Bijdragen</a></li>
-        <li><a href="help.html"  >Help</a></li>
-        <li><a href="#">Sluiten</a></li>
-    </ul>
+  </nav>
+        <ul id="mainmenu" class="slide" style="z-index:999;height: 98vh;width:0px;transition: width .5s ease">
+            <li><input id="searchinput" type="text"/><img src="images/loop.png" style="width:1.3em;float:right"></li>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="#" >Over deze menukaart</a></li>
+            <li><a href="#" >Bijdragen</a></li>
+            <li><a href="help.html"  >Help</a></li>
+            <li><a href="#">Sluiten</a></li>
+        </ul>
+
    <!--<ul id="dpmenu" class="slide" style="transition: height .5s ease;">
         <li><a id="dpmenu-info" href="#" >Wat?</a></li>
         <li><a id="dpmenu-agenda" href="#" >Wie?</a></li>
@@ -287,7 +284,7 @@
         <div class="afspraken" ><a href="afspraken.html" class="menu-header" style="font-size: 1.4em;">Afspraken</a></div>
         <div class="functionaliteit" ><a href="functionaliteit.html" class="menu-header" style="font-size: 1.4em;">Functionaliteit</a></div>
         <div class="samenwerking" ><a href="vormen-van-samenwerking.html" class="menu-header" style="grid-column: 1/7;grid-row: 1;">Samenwerking</a>
-            <a href="verwijzen-overdragen.html" class="menu-option" data-info="verwijzen-overdragen.html">Verwijzen/ overdragen</a>
+            <a href="verwijzen-overdragen.html" class="menu-option" data-info="verwijzen-overdragen.html" data-caption="Verwijzen/ overdragen">Verwijzen/ overdragen</a>
             <a href="consulteren.html" class="menu-option">Consulteren</a>
             <a href="shared-care.html" class="menu-option">Shared care</a>
             <a href="ad-hoc-inzage.html" class="menu-option">Ad hoc inzage</a>
@@ -379,7 +376,7 @@
         </div>
         <div class="xis">
             <a href="dossiervormende-systemen.html" class="menu-header" style="grid-column: 1/11;grid-row: 1;">Dossiervormende systemen (XIS)</a>
-            <a href="epd.html" class="menu-option" style="clear: both;" data-info="epd.html">EPD</a>
+            <a href="epd.html" class="menu-option" style="clear: both;" data-caption="EPD" data-info="epd.html">EPD</a>
             <a href="ecd.html" class="menu-option">ECD</a>
             <a href="his.html" class="menu-option">HIS</a>
             <a href="hapis.html" class="menu-option">HAPIS</a>

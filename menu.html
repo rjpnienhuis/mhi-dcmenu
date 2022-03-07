@@ -192,7 +192,6 @@
           height:0px;
           overflow: hidden;
           text-align: center;
-          transition: height .5s ease;
           padding: 0px;
           margin: 0px;
           position:absolute; 
@@ -211,8 +210,10 @@
 <body>
     <script>
         document.querySelector("body").addEventListener('click', function(e) {
-          var dpm = document.getElementById("dpmenu");
+          var dpm = document.getElementById("dpmenu");          
           dpm.style.height="0px";
+          var menu = document.getElementById("mainmenu");
+          menu.style.width="0px";
 
             var element = e.target;
             if(element.dataset.info !=null){
@@ -228,13 +229,23 @@
                 dpm.style.minWidth=element.clientWidth +"px";
                 dpm.style.left= rect.left + "px";      
                 document.getElementById("dpmenu-info").href=element.dataset.info;
+            }else if(element.id=="menubutton"){
+                e.preventDefault();   
+                menu.style.width="40vh";
             }
         }, false);
     </script>
 
   
   </nav> 
-    <ul id="dpmenu" class="slide">
+    <ul id="mainmenu" class="slide" style="z-index:999;height: 98vh;width:0px;transition: width .5s ease;">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="#" >Over deze menukaart</a></li>
+        <li><a href="#" >Bijdragen</a></li>
+        <li><a href="help.html"  >Help</a></li>
+        <li><a href="#">Sluiten</a></li>
+    </ul>
+    <ul id="dpmenu" class="slide" style="transition: height .5s ease;">
         <li><a id="dpmenu-info" href="#" >Wat?</a></li>
         <li><a id="dpmenu-agenda" href="#" >Wie?</a></li>
         <li><a id="dpmenu-agenda" href="#" >Wanneer?</a></li>
@@ -242,7 +253,13 @@
     </ul>
     <div class="container">
         <div class="gebruik" ><a href="gebruik.html" class="menu-header" style="font-size: 1.4em;">Gebruik</a></div>
-        <div class="usecases" ><a href="usecases.html" class="menu-header" style="grid-column: 1/11;grid-row: 1;">Usecases</a>
+        <div class="usecases" >
+            <div style="grid-column: 1/11;grid-row: 1;">
+                <a href="controverse-platforms-voor-samenwerking.html" style="float:left">
+                    <button ID="menubutton" class="navbutton" style="background-color: green;">Menu</button>
+                </a>
+                <a href="usecases.html" class="menu-header">Usecases</a>
+            </div>
             <a href="medicatie-management.html" class="menu-option">Medicatie management</a>
             <a href="regionaal-tumorboard.html" class="menu-option">Regionaal tumor board</a>
             <a href="overdracht-thorax-chirurgie.html" class="menu-option">Overdracht thorax chirurgie</a>

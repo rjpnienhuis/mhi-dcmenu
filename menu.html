@@ -211,23 +211,24 @@
     <script>
         document.querySelector("body").addEventListener('click', function(e) {
           var dpm = document.getElementById("dpmenu");          
-          dpm.style.height="0px";
+          dpm.style.width="0px";
           var menu = document.getElementById("mainmenu");
           menu.style.width="0px";
 
             var element = e.target;
             if(element.dataset.info !=null){
                 e.preventDefault();
-                const rect = element.getBoundingClientRect();
-                if(rect.top > (document.documentElement.clientHeight/2)){
-                    var size = parseFloat(getComputedStyle(element).fontSize);
-                    dpm.style.top=rect.top - (size*13)+ "px";  
-                }else{
-                    dpm.style.top=rect.top+element.clientHeight + "px";   
-                }
-                dpm.style.height="13em";
-                dpm.style.minWidth=element.clientWidth +"px";
-                dpm.style.left= rect.left + "px";      
+                //const rect = element.getBoundingClientRect();
+                //if(rect.top > (document.documentElement.clientHeight/2)){
+                //    var size = parseFloat(getComputedStyle(element).fontSize);
+                //    dpm.style.top=rect.top - (size*13)+ "px";  
+                //}else{
+                //    dpm.style.top=rect.top+element.clientHeight + "px";   
+               // }
+               // dpm.style.height="13em";
+               // dpm.style.minWidth=element.clientWidth +"px";
+               // dpm.style.left= rect.left + "px";      
+                dpm.style.width="40vh";
                 document.getElementById("dpmenu-info").href=element.dataset.info;
             }else if(element.id=="menubutton"){
                 e.preventDefault();   
@@ -245,7 +246,13 @@
         <li><a href="help.html"  >Help</a></li>
         <li><a href="#">Sluiten</a></li>
     </ul>
-    <ul id="dpmenu" class="slide" style="transition: height .5s ease;">
+   <!--<ul id="dpmenu" class="slide" style="transition: height .5s ease;">
+        <li><a id="dpmenu-info" href="#" >Wat?</a></li>
+        <li><a id="dpmenu-agenda" href="#" >Wie?</a></li>
+        <li><a id="dpmenu-agenda" href="#" >Wanneer?</a></li>
+        <li><a href="#">Sluiten</a></li>
+    </ul>-->
+    <ul id="dpmenu" class="slide" style="z-index:999;height: 98vh;width:0px;transition: width .5s ease;">
         <li><a id="dpmenu-info" href="#" >Wat?</a></li>
         <li><a id="dpmenu-agenda" href="#" >Wie?</a></li>
         <li><a id="dpmenu-agenda" href="#" >Wanneer?</a></li>

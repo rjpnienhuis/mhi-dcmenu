@@ -194,7 +194,7 @@
           text-align: center;
           padding: 0px;
           margin: 0px;
-          position:absolute; 
+          position:fixed; 
           background : #2d2f31;
           list-style-type:none;  
         }
@@ -227,20 +227,20 @@
             dpm.style.width="0px";
             var menu = document.getElementById("mainmenu");            
             menu.style.width="0px";
-            var container = document.getElementById("containerdiv");
-            alert(container.getBoundingClientRect().top);
-            var ypos = 0-container.getBoundingClientRect().top;
+            //var container = document.getElementById("containerdiv");
+            //alert(container.getBoundingClientRect().top);
+            //var ypos = 0-container.getBoundingClientRect().top;
             
             if(element.dataset.info !=null){
                 e.preventDefault();
-               dpm.style.top=ypos+"px";
+               //dpm.style.top=ypos+"px";
                dpm.style.width="50vw";
                dpm.style.height=window.innerHeight+"px";
                 document.getElementById("dpmenu-info").href=element.dataset.info;
                 document.getElementById("dpmenu-info").innerHTML=element.dataset.caption;
             }else if(element.id=="menubutton"){
                 e.preventDefault();
-                menu.style.top=ypos+"px";  
+                //menu.style.top=ypos+"px";  
                 menu.style.width="50vw";
                 menu.style.height=window.innerHeight+"px";
             }
@@ -249,7 +249,7 @@
 
   
   </nav>
-        <ul id="mainmenu" class="slide" style="z-index:999;height: 98vh;width:0px;transition: width .5s ease">
+        <ul id="mainmenu" class="slide" style="z-index:999;height: 98vh;width:0px;top:0px;left:0px; transition: width .5s ease">
             <li><input id="searchinput" type="text"/><img src="images/loop.png" style="width:1.3em;float:right"></li>
             <li><a href="index.html" >Home</a></li>
             <li><a href="#" >Over deze menukaart</a></li>
@@ -265,7 +265,7 @@
         <li><a id="dpmenu-agenda" href="#" >Wanneer?</a></li>
         <li><a href="#">Sluiten</a></li>
     </ul>-->
-    <ul id="dpmenu" class="slide" style="z-index:999;height: 98vh;width:0px;transition: width .5s ease;">
+    <ul id="dpmenu" class="slide" style="z-index:999;height: 98vh;width:0px;top:0px;left:0px;transition: width .5s ease;">
         <li><a id="dpmenu-info" href="#" >Wat?</a></li>
         <li><a id="dpmenu-agenda" href="#" >Wie?</a></li>
         <li><a id="dpmenu-agenda" href="#" >Wanneer?</a></li>

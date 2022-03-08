@@ -231,7 +231,7 @@
             
             if(element.dataset.info !=null){
                 e.preventDefault();
-               dpm.style.top=window.visualViewport.top+"px";
+               dpm.style.top=window.visualViewport.offsetTop+"px";
                dpm.style.width="50vw";
                dpm.style.height=window.visualViewport.height+"px";
                 document.getElementById("dpmenu-info").href=element.dataset.info;
@@ -239,7 +239,7 @@
             }else if(element.id=="menubutton"){
                 e.preventDefault();
                 menu.style.width="50vw";
-                menu.style.top=window.visualViewport.top + "px";
+                menu.style.top=window.visualViewport.offsetTop + "px";
                 menu.style.height=window.visualViewport.height+"px";
             }
         }, false);

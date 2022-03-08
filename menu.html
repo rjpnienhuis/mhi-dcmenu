@@ -227,21 +227,19 @@
             dpm.style.width="0px";
             var menu = document.getElementById("mainmenu");            
             menu.style.width="0px";
-            //var container = document.getElementById("containerdiv");
-            //alert(container.getBoundingClientRect().top);
-            //var ypos = 0-container.getBoundingClientRect().top;
+            
             
             if(element.dataset.info !=null){
                 e.preventDefault();
-               //dpm.style.top=ypos+"px";
+               dpm.style.top=window.visualViewport.top+"px";
                dpm.style.width="50vw";
                dpm.style.height=window.visualViewport.height+"px";
                 document.getElementById("dpmenu-info").href=element.dataset.info;
                 document.getElementById("dpmenu-info").innerHTML=element.dataset.caption;
             }else if(element.id=="menubutton"){
                 e.preventDefault();
-                //menu.style.top=ypos+"px";  
                 menu.style.width="50vw";
+                menu.style.top=window.visualViewport.top + "px";
                 menu.style.height=window.visualViewport.height+"px";
             }
         }, false);

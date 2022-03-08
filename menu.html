@@ -225,9 +225,10 @@
             }
             var dpm = document.getElementById("dpmenu");          
             dpm.style.width="0px";
-            var menu = document.getElementById("mainmenu");
+            var menu = document.getElementById("mainmenu");            
             menu.style.width="0px";
-            var ypos = 0-document.body.getBoundingClientRect().top;
+            var container = document.getElementById("containerdiv");
+            var ypos = 0-container.getBoundingClientRect().top;
             
             if(element.dataset.info !=null){
                 e.preventDefault();
@@ -271,7 +272,7 @@
         <li><a href="#">Sluiten</a></li>
         <li style="position:absolute;left:0px;bottom:5px;color:white">Copyright Melius Health Informatics 2022</li>
     </ul>
-    <div class="container">
+    <div id="containerdiv" class="container">
         <div class="gebruik" ><a href="gebruik.html" class="menu-header" style="font-size: 1.4em;">Gebruik</a></div>
         <div class="usecases" >
             <div style="grid-column: 1/11;grid-row: 1;">

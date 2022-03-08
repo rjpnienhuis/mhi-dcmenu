@@ -247,7 +247,6 @@
             if(element.dataset.info !=null){
                 activeMenu = dpm;
                 document.getElementById("dpmenu-info").href=element.dataset.info;
-                document.getElementById("dpmenu-info").innerHTML=element.dataset.caption;
             }else if(element.id=="menubutton"){        
                 activeMenu=menu;
             }
@@ -280,9 +279,10 @@
         </div>
     <div id="dpmenu" class="slide">
         <ul>
-            <li><a id="dpmenu-info" href="#" >Wat?</a></li>
-            <li><a id="dpmenu-agenda" href="#" >Wie?</a></li>
-            <li><a id="dpmenu-agenda" href="#" >Wanneer?</a></li>
+            <li ><a href="https://meliushealthinformatics.nl"><img src="images/logo_white_large.png" style="width:1.3em;float:left"></a></li>        
+            <li><a id="dpmenu-info" href="#" >Meer informatie</a></li>
+            <li><a id="dpmenu-agenda" href="#" >Leveranciers en dienstverleners</a></li>
+            <li><a id="dpmenu-agenda" href="#" >Agenda</a></li>
             <li><a href="#">Sluiten</a></li>
             <li style="position:absolute;left:0px;bottom:5px;color:white"><a href="https://meliushealthinformatics.nl"> Copyright Melius Health Informatics 2022</a></li>
         </ul>

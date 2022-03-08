@@ -217,6 +217,7 @@
         }
         window.onscroll = hideMenus;
         window.onresize = hideMenus;
+        window.ontouchmove=hideMenus;
 
         document.querySelector("body").addEventListener('click', function(e) {
             var element = e.target;

@@ -228,6 +228,7 @@
             var menu = document.getElementById("mainmenu");            
             menu.style.width="0px";
             var container = document.getElementById("containerdiv");
+            alert(container.getBoundingClientRect().top);
             var ypos = 0-container.getBoundingClientRect().top;
             
             if(element.dataset.info !=null){
@@ -243,7 +244,6 @@
                 menu.style.width="50vw";
                 menu.style.height=window.innerHeight+"px";
             }
-            alert(ypos);
         }, false);
     </script>
 

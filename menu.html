@@ -215,7 +215,7 @@
             var menu = document.getElementById("mainmenu");
             menu.style.width="0px";
         }
-        
+
         document.querySelector("body").addEventListener('click', function(e) {
             var element = e.target;
             if(element.id=="searchinput" ){
@@ -230,13 +230,13 @@
             if(element.dataset.info !=null){
                 e.preventDefault();
                dpm.style.top=ypos+"px";
-               dpm.style.width="30vw";
+               dpm.style.width="40vw";
                 document.getElementById("dpmenu-info").href=element.dataset.info;
                 document.getElementById("dpmenu-info").innerHTML=element.dataset.caption;
             }else if(element.id=="menubutton"){
                 e.preventDefault();
                 menu.style.top=ypos+"px";  
-                menu.style.width="30vw";
+                menu.style.width="40vw";
             }
         }, false);
     </script>

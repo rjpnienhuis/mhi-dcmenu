@@ -216,6 +216,11 @@
           text-decoration: none; 
           text-align: center;
         }
+        @media (max-width: 767px) {
+        .hidden-mobile {
+          display: none;
+        }
+      }
     </style>
 </head>
 <body>
@@ -259,7 +264,7 @@
   </nav>
         <div class="slide" id="mainmenu">
             <ul>       
-                <li ><a href="https://meliushealthinformatics.nl"><img src="images/logo_white_large.png" style="width:1.3em;float:left"></a> <a href="search.html"><img id="loop" src="images/loop.png" style="margin-left: 10px;position: sticky;  width:1.3em;float:right"></a><a href="search.html" style="float:right; text-decoration: underline;">Zoeken</a></li>        
+                <li ><a href="https://meliushealthinformatics.nl"><img src="images/logo_white_large.png" style="width:1.3em;float:left"></a> <a href="search.html"><img id="loop" src="images/loop.png" style="margin-left: 10px;position: sticky;  width:1.3em;float:right"></a><a href="search.html" class="hidden-mobile" style="float:right; text-decoration: underline;">Zoeken</a></li>        
                 <li style="clear:both"><a href="index.html" >Home</a></li>
                 <li><a href="#" >Over deze menukaart</a></li>
                 <li><a href="#" >Bijdragen</a></li>

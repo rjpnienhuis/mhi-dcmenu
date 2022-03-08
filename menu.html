@@ -197,9 +197,22 @@
           position:fixed; 
           background : #2d2f31;
           list-style-type:none;  
+          z-index:999;
+          height: 98vh;
+          width:0px;
+          top:0px;
+          left:0px; 
+          transition: width .5s ease"
+        }
+
+        .slide ul{
+            list-style-type:none;
+            background : #2d2f31;
+            margin:0px;
         }
 
         .slide li {padding : 1em;margin: 0px;}
+
         .slide li a{
           color: white;
           text-decoration: none; 
@@ -229,48 +242,45 @@
             var menu = document.getElementById("mainmenu");            
             menu.style.width="0px";
             
-            
+            var activeMenu;
             if(element.dataset.info !=null){
-                e.preventDefault();
-               dpm.style.top=window.visualViewport.offsetTop+"px";
-               dpm.style.width="50vw";
-               dpm.style.height=window.visualViewport.height+"px";
+                activeMenu = dpm;
                 document.getElementById("dpmenu-info").href=element.dataset.info;
                 document.getElementById("dpmenu-info").innerHTML=element.dataset.caption;
-            }else if(element.id=="menubutton"){
+            }else if(element.id=="menubutton"){        
+                activeMenu=menu;
+            }
+            if(activeMenu != undefined){
                 e.preventDefault();
-                menu.style.width="50vw";
-                menu.style.top=window.visualViewport.offsetTop + "px";
-                menu.style.height=window.visualViewport.height+"px";
+                activeMenu.style.width="50vw";
+                activeMenu.style.top=window.visualViewport.offsetTop + "px";
+                activeMenu.style.height=window.visualViewport.height+"px";
             }
         }, false);
     </script>
 
   
   </nav>
-        <ul id="mainmenu" class="slide" style="z-index:999;height: 98vh;width:0px;top:0px;left:0px; transition: width .5s ease">
-            <li><input id="searchinput" type="text"/><img src="images/loop.png" style="width:1.3em;float:right"></li>
-            <li><a href="index.html" >Home</a></li>
-            <li><a href="#" >Over deze menukaart</a></li>
-            <li><a href="#" >Bijdragen</a></li>
-            <li><a href="help.html"  >Help</a></li>
+        <div class="slide" id="mainmenu">
+            <ul>       
+                <li ><a href="https://meliushealthinformatics.nl"><img src="images/logo_white_large.png" style="width:1.3em;float:left"></a> <a href="search.html"><img id="loop" src="images/loop.png" style="margin-left: 10px;position: sticky;  width:1.3em;float:right"></a><a href="search.html" style="float:right; text-decoration: underline;">Zoeken</a></li>        
+                <li style="clear:both"><a href="index.html" >Home</a></li>
+                <li><a href="#" >Over deze menukaart</a></li>
+                <li><a href="#" >Bijdragen</a></li>
+                <li><a href="help.html"  >Help</a></li>
+                <li><a href="#">Sluiten</a></li>
+                <li style="position:absolute;left:0px;bottom:5px;color:white"><a href="https://meliushealthinformatics.nl">Copyright Melius Health Informatics 2022</a></li>
+            </ul>
+        </div>
+    <div id="dpmenu" class="slide">
+        <ul>
+            <li><a id="dpmenu-info" href="#" >Wat?</a></li>
+            <li><a id="dpmenu-agenda" href="#" >Wie?</a></li>
+            <li><a id="dpmenu-agenda" href="#" >Wanneer?</a></li>
             <li><a href="#">Sluiten</a></li>
             <li style="position:absolute;left:0px;bottom:5px;color:white">Copyright Melius Health Informatics 2022</li>
         </ul>
-
-   <!--<ul id="dpmenu" class="slide" style="transition: height .5s ease;">
-        <li><a id="dpmenu-info" href="#" >Wat?</a></li>
-        <li><a id="dpmenu-agenda" href="#" >Wie?</a></li>
-        <li><a id="dpmenu-agenda" href="#" >Wanneer?</a></li>
-        <li><a href="#">Sluiten</a></li>
-    </ul>-->
-    <ul id="dpmenu" class="slide" style="z-index:999;height: 98vh;width:0px;top:0px;left:0px;transition: width .5s ease;">
-        <li><a id="dpmenu-info" href="#" >Wat?</a></li>
-        <li><a id="dpmenu-agenda" href="#" >Wie?</a></li>
-        <li><a id="dpmenu-agenda" href="#" >Wanneer?</a></li>
-        <li><a href="#">Sluiten</a></li>
-        <li style="position:absolute;left:0px;bottom:5px;color:white">Copyright Melius Health Informatics 2022</li>
-    </ul>
+    </div>  
     <div id="containerdiv" class="container">
         <div class="gebruik" ><a href="gebruik.html" class="menu-header" style="font-size: 1.4em;">Gebruik</a></div>
         <div class="usecases" >

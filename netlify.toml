@@ -1,8 +1,8 @@
 [build]
   functions = 'functions'
 #
-#[[plugins]]
-#  package = 'netlify-plugin-search-index'
+[[plugins]]
+  package = 'netlify-plugin-search-index'
 #  [plugins.inputs]
 #    generatedFunctionName = 'search'
 #    publishDirJSONFileName = 'searchIndex'

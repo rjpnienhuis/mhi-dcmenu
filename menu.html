@@ -253,7 +253,12 @@
             }
             if(activeMenu != undefined){
                 e.preventDefault();
-                activeMenu.style.width="50vw";
+                var w = "50vw";
+                if(window.visualViewport.width<768){
+                    w="95vw";
+
+                }
+                activeMenu.style.width=w;
                 activeMenu.style.top=window.visualViewport.offsetTop + "px";
                 activeMenu.style.height=window.visualViewport.height+"px";
             }
@@ -279,7 +284,7 @@
             <li><a id="dpmenu-agenda" href="#" >Wie?</a></li>
             <li><a id="dpmenu-agenda" href="#" >Wanneer?</a></li>
             <li><a href="#">Sluiten</a></li>
-            <li style="position:absolute;left:0px;bottom:5px;color:white">Copyright Melius Health Informatics 2022</li>
+            <li style="position:absolute;left:0px;bottom:5px;color:white"><a href="https://meliushealthinformatics.nl"> Copyright Melius Health Informatics 2022</a></li>
         </ul>
     </div>  
     <div id="containerdiv" class="container">

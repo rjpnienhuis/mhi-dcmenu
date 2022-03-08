@@ -5,4 +5,4 @@
   package = 'netlify-plugin-search-index'
   [plugins.inputs]
     generatedFunctionName = 'search'
-    publishDirJSONFileName = 'null'
+    publishDirJSONFileName = 'searchIndex'
